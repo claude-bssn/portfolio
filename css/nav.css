@@ -111,6 +111,10 @@
   right: 1%;
   top: 19%;
 }
+.img3:hover .miniIsland {
+  visibility: visible;
+  opacity: 1;
+}
 .img4 {
   position: absolute;
   right: 14%;

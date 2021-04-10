@@ -1,0 +1,233 @@
+.parallaxFire {
+  height: 200vh;
+  width: 100vw;
+  background-image: url("../public/img/fire/FireBg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  z-index: -7;
+}
+.fire {
+  position: relative;
+  height: 140vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  z-index: -1;
+}
+.ambers {
+  background-image: url("../public/img/fire/ambers.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  z-index: -6;
+  top: 0;
+  bottom: -1vh;
+  width: 100vw;
+  height: 100vh;
+}
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 7s  ;
+  animation-duration: 7s ;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.flex > * {
+  position: absolute;
+  display: flex;
+}
+.fire1 {
+  left: 20vw;
+  top: 10vh;
+}
+.fire2 {
+  left: 68vw;
+  top: 25vh;
+}
+.fire3 {
+  left: 8vw;
+  top: 50vh;
+}
+.fire4 {
+  left: 40vw;
+  top: 60vh;
+}
+.flame1 {
+  width: 15vw;
+  top: 8vh;
+  left: -3vw;
+  z-index: 1
+  
+}
+.flame2 {
+  width: 18vw;
+  left: 1vw;
+}
+.flame3 {
+  width: 15vw;
+  left: 7vw;
+  top: 10vh;
+}
+.flame4 {
+  width: 14vw;
+  
+  
+}
+.flame5 {
+  width: 13vw;
+  top:3vh;
+    left: 3vw ;
+  z-index: 1;
+}
+.flame6 {
+  width: 14vw;
+  left :-5vw;
+  top: 4vh;
+  z-index: 2
+}
+.flame7 {
+  width: 17vw;
+  left:-3vw;
+}
+.flame8 {
+  width: 16vw;
+  left: 6vw;
+}
+.flame9 {
+  width: 16vw;
+  top: 7vh;
+  left:1vw
+}
+.flame10 {
+  width: 14vw;
+  top: 3vh;
+  left:9vw;
+}
+.flame11 {
+  width: 14vw;
+    left:3vw;
+
+}
+.flame12 {
+  width: 14vw;
+  top: 5vh;
+  left:-3vw;
+}
+//###################
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+}
+.scene {
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  margin: 250px auto;
+  perspective: 1000px;
+  left: 35vw;
+  // top: 10vh;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px); 
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.carousel__cell {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  width: 40vh;
+  height: 40vh;
+  left: 10px;
+  top: 10px;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.carousel__cell:nth-child(6n+1) {
+  background-image: url('../public/img/fire/fire1.png');
+}
+.carousel__cell:nth-child(6n+2) {
+  background-image: url('../public/img/fire/fire2.png');
+}
+.carousel__cell:nth-child(6n+3) {
+  background-image: url('../public/img/fire/fire3.png');
+}
+.carousel__cell:nth-child(6n+4) {
+  background-image: url('../public/img/fire/fire1.png');
+}
+.carousel__cell:nth-child(6n+5) {
+  background-image: url('../public/img/fire/fire2.png');
+}
+.carousel__cell:nth-child(6n+6) {
+  background-image: url('../public/img/fire/fire3.png');
+}
+.carousel__cell:nth-child(1) {
+  transform: rotateY(0deg) translateZ(30vw);
+}
+.carousel__cell:nth-child(2) {
+  transform: rotateY(60deg) translateZ(30vw);
+}
+.carousel__cell:nth-child(3) {
+  transform: rotateY(120deg) translateZ(30vw);
+}
+.carousel__cell:nth-child(4) {
+  transform: rotateY(180deg) translateZ(30vw);
+}
+.carousel__cell:nth-child(5) {
+  transform: rotateY(240deg) translateZ(30vw);
+}
+.carousel__cell:nth-child(6) {
+  transform: rotateY(300deg) translateZ(30vw);
+}
+
+.button {
+  display:flex;
+  position: relative;
+  top: 45vh;
+  width: 40vh;
+  justify-content: space-between;
+ 
+}
