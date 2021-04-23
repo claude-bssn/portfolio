@@ -156,6 +156,23 @@ body {
   margin: 250px auto;
   perspective: 1000px;
   left: 35vw;
+  display: none;
+}
+.buttonX {
+  border: white solid 3px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 5px;
+  position: absolute;
+  right: -20vw;
+  top: -30px;
 }
 .carousel {
   width: 100%;
@@ -217,17 +234,17 @@ body {
 }
 .button {
   display: flex;
-  position: relative;
+  position: absolute;
   top: 45vh;
   width: 40vw;
   height: 20px;
   justify-content: space-between;
-  left: -122px;
+  left: -4vw;
 }
 .button section {
   width: 100px;
 }
 .arrow {
   stroke: #cd3c32;
-  stroke-width: 2px;
+  stroke-width: 1px;
 }

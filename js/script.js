@@ -80,23 +80,43 @@ $(document).ready(function(){
 // let box = document.querySelector('.fire');
 // let scrolled = box.getBoundingClientRect();
 
+// ############### fire carousel launcher ###############
+let fire = document.querySelector('#fire');
+let buttonX = document.querySelector('.buttonX');
+let scene = document.querySelector('.scene');
+fire.addEventListener('click', () => {
+    if (fire.style.display="flex"){
+        fire.style.display ='none';
+        scene.style.display ='flex';
+    }
+}
+)
+
+buttonX.addEventListener('click', () => {
+    if (fire.style.display="none"){
+        fire.style.display ='flex';
+        scene.style.display ='none';
+    }
+}
+)
+
 // ############### fire carousel ############### 
-var carousel = document.querySelector('.carousel');
-var cellCount = 6;
-var selectedIndex = 0;
+let carousel = document.querySelector('.carousel');
+let cellCount = 6;
+let selectedIndex = 0;
 
 function rotateCarousel() {
-  var angle = selectedIndex / cellCount * -360;
+  let angle = selectedIndex / cellCount * -360;
   carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
 }
 
-var prevButton = document.querySelector('.previous-button');
+let prevButton = document.querySelector('.previous-button');
 prevButton.addEventListener( 'click', function() {
   selectedIndex--;
   rotateCarousel();
 });
 
-var nextButton = document.querySelector('.next-button');
+let nextButton = document.querySelector('.next-button');
 nextButton.addEventListener( 'click', function() {
   selectedIndex++;
   rotateCarousel();
