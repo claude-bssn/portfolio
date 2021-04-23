@@ -149,7 +149,6 @@ body {
   font-family: sans-serif;
 }
 .scene {
-  border: 1px solid #CCC;
   margin: 40px 0;
   position: absolute;
   width: 40vh;
@@ -220,6 +219,15 @@ body {
   display: flex;
   position: relative;
   top: 45vh;
-  width: 40vh;
+  width: 40vw;
+  height: 20px;
   justify-content: space-between;
+  left: -122px;
+}
+.button section {
+  width: 100px;
+}
+.arrow {
+  stroke: #cd3c32;
+  stroke-width: 2px;
 }
