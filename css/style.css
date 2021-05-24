@@ -44,4 +44,7 @@ header {
 main {
   height: 0vh;
 }
+.name{
+  display: block;
+}
 

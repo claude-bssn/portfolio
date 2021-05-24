@@ -8,13 +8,17 @@ window.addEventListener('scroll', () => {
         div.style.height = `${position / 2}%`;
         if (position <= 1) {
             div.style.height = '0px';
+            document.querySelector('.nameTitle').style.display = 'none';
+        }else if(position > 1){
+            document.querySelector('.nameTitle').style.display = 'block';
+
         }
         // console.log(`${position}%`);
     })
 // ############### parallax earth ############### 
     let box = document.querySelector('.earth');
     let scrolled = box.getBoundingClientRect();
-    let scrollPoss = scrolled.top *1.5;
+    let scrollPoss = scrolled.top *0.5;
         
         const background = document.querySelectorAll(".island12, .island13");
         background.forEach((img) => {
@@ -49,17 +53,17 @@ window.addEventListener('scroll', () => {
     if(earth < -150){
         console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
-        img.classList.remove('swing');
+        img.classList.remove('bounce-4');
     })} 
     else if(earth < -41.85){
         console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
-        img.classList.add('swing');
+        img.classList.add('bounce-4');
     })
     }else if(earth > -41.85 ){
         console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
-        img.classList.remove('swing');
+        img.classList.remove('bounce-4');
     })}
 }, false);
 
