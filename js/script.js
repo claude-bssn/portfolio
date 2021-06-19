@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
         // console.log(`${position}%`);
     })
 // ############### parallax earth ############### 
-    let box = document.querySelector('.earth');
+    let box = document.querySelector('.parallaxEarth');
     let scrolled = box.getBoundingClientRect();
     let scrollPoss = scrolled.top *0.5;
         
@@ -125,3 +125,6 @@ nextButton.addEventListener( 'click', function() {
   selectedIndex++;
   rotateCarousel();
 });
+
+let triangle =document.querySelector('.carousel__cell');
+console.log(triangle);

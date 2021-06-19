@@ -1,21 +1,25 @@
-.parallaxEarth {
-    height: 140vh;
+.earth {
+  position: relative;
+  height: 250vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
+    
+  }
+  .parallaxEarth {
+    height: 250vh;
     width: 100vw;
-    background-image: url("../public/img/earth/Rectangle.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    // position: sticky;
-    // top: 0;
+    top: 0vh;
     z-index: -7;
-  }
-  .earth {
+    // background: #21d4fd;
+    // background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
     position: relative;
-    height: 140vh;
-    width: 100vw;
-    display: flex;
-    overflow: hidden;
-    z-index: -1;
+    margin-top: 100vh;
+    
   }
+  
   .island {
     margin-top: 50vh;
     position: absolute;
@@ -227,8 +231,8 @@
   }
   @keyframes bounce-4 {
       0%   { transform: scale(1,1)    translateY(0); }
-      10%  { transform: scale(1.1,.9) translateY(0); }
-      30%  { transform: scale(.9,1.1) translateY(0px); }
+      10%  { transform: scale(1.1,2) translateY(0); }
+      30%  { transform: scale(2,1.1) translateY(0px); }
       50%  { transform: scale(1,1)    translateY(0); }
       100% { transform: scale(1,1)    translateY(0); }
   }
