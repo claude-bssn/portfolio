@@ -1,0 +1,20 @@
+.water {
+  width: 100vw;
+  height: 350vh;
+  background: #a50e07;
+  background: linear-gradient(180deg, #a4130c 2%, #a50e07 13%, #00a6bb 49%, #6cbbcb 77%, #a1d1dc 100%);
+}
+.parallaxWater {
+  padding-top: 150vh;
+  display: flex;
+  justify-content: center;
+}
+.waterline1 {
+  margin-top: 40vh;
+}
+.waterline2 {
+  margin-top: 20vh;
+}
+.waterline3 {
+  margin-top: 10vh;
+}

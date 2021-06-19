@@ -85,7 +85,7 @@ $(document).ready(function(){
 // let scrolled = box.getBoundingClientRect();
 
 // ############### fire carousel launcher ###############
-let fire = document.querySelector('#fire');
+let fire = document.querySelector('.fire');
 let buttonX = document.querySelector('.buttonX');
 let scene = document.querySelector('.scene');
 fire.addEventListener('click', () => {
@@ -128,3 +128,29 @@ nextButton.addEventListener( 'click', function() {
 
 let triangle =document.querySelector('.carousel__cell');
 console.log(triangle);
+
+// ############### water line ############### 
+ 
+const indexDrop = 13;
+let waterlineA = document.querySelector('.waterline1');
+let topValue;
+let imgValue;
+function createImageNode() {
+    var img = document.createElement('img');
+    img.src = `./public/img/water/water${imgValue}.png`;
+    img.style.width = '10em';
+    img.style.margin = " 1vw -2vw 1vw -2vw ";
+    img.style.position = 'relative';
+    img.style.top = `${topValue}px`
+   
+    return img;
+};
+
+for (var i = 0; i < indexDrop; i++){
+    topValue = Math.floor(Math.random() * 60);
+    imgValue = Math.floor(Math.random() * 3 + 1);
+    waterlineA.appendChild(createImageNode());
+
+    console.log(imgValue);
+
+};
