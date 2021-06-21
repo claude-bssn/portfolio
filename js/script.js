@@ -18,7 +18,8 @@ window.addEventListener('scroll', () => {
 // ############### parallax earth ############### 
     let box = document.querySelector('.parallaxEarth');
     let scrolled = box.getBoundingClientRect();
-    let scrollPoss = scrolled.top *0.5;
+    let scrollPoss = scrolled.top * 0.5;
+    
         
         const background = document.querySelectorAll(".island12, .island13");
         background.forEach((img) => {
@@ -51,20 +52,36 @@ window.addEventListener('scroll', () => {
     let earth = scrolled.top;
     
     if(earth < -150){
-        console.log(earth);
+        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.remove('bounce-4');
     })} 
     else if(earth < -41.85){
-        console.log(earth);
+        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.add('bounce-4');
     })
     }else if(earth > -41.85 ){
-        console.log(earth);
+        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.remove('bounce-4');
-    })}
+    })
+    }
+
+
+    // ############### parallax water ############### 
+
+    let parallaxWater = document.querySelector('.parallaxWater');
+    let scrolledWater = parallaxWater.getBoundingClientRect();
+    let scrollWater = scrolledWater.top * 0.5 ;
+        
+    const backwater = document.querySelector(".waterline2");
+    backwater.style.top = (scrollWater * 0.3) + "px";
+        
+    const backwater2 = document.querySelector(".waterline3");
+    backwater2.style.top = (scrollWater * 0.4) + "px";
+    console.log(scrollWater);
+
 }, false);
 
 // ############### flower animation ############### 
@@ -81,17 +98,21 @@ $(document).ready(function(){
         });
 });
 
-// let box = document.querySelector('.fire');
-// let scrolled = box.getBoundingClientRect();
+
 
 // ############### fire carousel launcher ###############
+
 let fire = document.querySelector('.fire');
 let buttonX = document.querySelector('.buttonX');
 let scene = document.querySelector('.scene');
+let sceneBG = document.querySelector('.flame');
+
 fire.addEventListener('click', () => {
     if (fire.style.display="flex"){
         fire.style.display ='none';
-        scene.style.display ='flex';
+        scene.style.display = 'flex';
+        sceneBG.style.background = '#000000ab';
+        sceneBG.style.position = 'fixed';
     }
 }
 )
@@ -100,7 +121,11 @@ buttonX.addEventListener('click', () => {
     if (fire.style.display="none"){
         fire.style.display ='flex';
         scene.style.display ='none';
+        sceneBG.style.background = 'transparent';
+        sceneBG.style.position = 'sticky';
+
     }
+
 }
 )
 
@@ -108,49 +133,100 @@ buttonX.addEventListener('click', () => {
 let carousel = document.querySelector('.carousel');
 let cellCount = 6;
 let selectedIndex = 0;
+let cell = 1;
+document.querySelector(`.cell${cell}`).style.display = 'block';
+
+console.log(cell);
 
 function rotateCarousel() {
   let angle = selectedIndex / cellCount * -360;
-  carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
+    carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
 }
 
 let prevButton = document.querySelector('.previous-button');
 prevButton.addEventListener( 'click', function() {
-  selectedIndex--;
-  rotateCarousel();
+    selectedIndex--;
+    rotateCarousel();
+    if (cell <= 6 && cell != 1) {
+        cell--;
+       
+
+    } else if (cell == 1) {
+        document.querySelector(`.cell${cell}`).style.display = 'none';
+        
+        cell = 6;
+
+    }
+    // console.log(cell);
+    console.log(cell);
+    document.querySelector(`.cell${cell}`).style.display = 'block';
+    document.querySelector(`.cell${cell + 1}`).style.display = 'none';
+    document.querySelector(`.cell${cell - 1}`).style.display = 'none';
+
+
 });
 
 let nextButton = document.querySelector('.next-button');
 nextButton.addEventListener( 'click', function() {
-  selectedIndex++;
-  rotateCarousel();
+    selectedIndex++;
+    rotateCarousel();
+    if (cell <= 5 ) {
+        cell++;
+    } else if (cell == 6) {
+        document.querySelector(`.cell${cell}`).style.display = 'none';
+        cell = 1;
+
+    } else if (cell == 0) {
+        cell = 1
+    }
+    // console.log(cell);
+    console.log(cell);
+    document.querySelector(`.cell${cell}`).style.display = 'block';
+    document.querySelector(`.cell${cell - 1}`).style.display = 'none';
+    document.querySelector(`.cell${cell + 1}`).style.display = 'none';
+
+
 });
 
-let triangle =document.querySelector('.carousel__cell');
-console.log(triangle);
 
 // ############### water line ############### 
  
 const indexDrop = 13;
-let waterlineA = document.querySelector('.waterline1');
+let waterline1 = document.querySelector('.waterline1');
+let waterline2 = document.querySelector('.waterline2');
+let waterline3 = document.querySelector('.waterline3');
 let topValue;
 let imgValue;
-function createImageNode() {
+var i = 0;
+function createImageNode(width, margin) {
     var img = document.createElement('img');
     img.src = `./public/img/water/water${imgValue}.png`;
-    img.style.width = '10em';
-    img.style.margin = " 1vw -2vw 1vw -2vw ";
+    img.style.width = `${width}vw`;
+    img.style.margin = `1vw ${margin}vw`;
     img.style.position = 'relative';
-    img.style.top = `${topValue}px`
-   
+    img.style.top = `${topValue}px`;
+    img.classList.add(`triangle${i}`);
     return img;
 };
-
-for (var i = 0; i < indexDrop; i++){
-    topValue = Math.floor(Math.random() * 60);
+function rand(top) {
+    topValue = Math.floor(Math.random() * `${top}`);
     imgValue = Math.floor(Math.random() * 3 + 1);
-    waterlineA.appendChild(createImageNode());
-
-    console.log(imgValue);
-
+}
+for (i = 0; i < indexDrop; i++){
+    rand(60);
+    waterline1.appendChild(createImageNode(11, -2));
+    rand(73);
+    waterline2.appendChild(createImageNode(8, -1.6));
+    if (i%2 == 0) {
+        rand(73);
+        waterline2.appendChild(createImageNode(8, -1.6));
+    };
+    rand(75);
+    waterline3.appendChild(createImageNode(6, -1.2));
+    rand(75);
+    waterline3.appendChild(createImageNode(6, -1.2));
 };
+// ############### water hover ###############
+// const triangle = document.querySelector('.waterline1');
+// let children = triangle.children;
+// console.log(children);

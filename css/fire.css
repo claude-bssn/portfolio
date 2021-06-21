@@ -14,16 +14,17 @@
   z-index: -7;
 }
 .ambers {
-  background-image: url("../public/img/fire/ambersFull.png");
+  background: url("../public/img/fire/ambersFull.png");
   background-repeat: no-repeat;
   background-size: 200%;
-  background-position: center;
-  position: sticky;
-  z-index: -6;
-  top: 0;
+  background-position: bottom;
+  position: relative;
+  z-index: 2;
+  top: -24vh;
   bottom: -1vh;
   width: 100vw;
-  height: 120vh;
+  height: 200vh;
+  padding-top: 31vh;
 }
 .fire {
   position: relative;
@@ -33,11 +34,19 @@
   overflow: hidden;
   z-index: -1;
 }
+.flame {
+  z-index: -6;
+  position: sticky;
+  top: 0;
+  bottom: -1vh;
+  width: 100vw;
+  height: 100vh;
+}
 .pulse {
   -webkit-animation-name: pulse;
   animation-name: pulse;
-  -webkit-animation-duration: 7s  ;
-  animation-duration: 7s ;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -111,7 +120,7 @@
 .flame5 {
   width: 13vw;
   top: 3vh;
-  left: 3vw ;
+  left: 3vw;
   z-index: 1;
 }
 .flame6 {
@@ -149,9 +158,6 @@
 }
 * {
   box-sizing: border-box;
-}
-body {
-  font-family: sans-serif;
 }
 .scene {
   margin: 40px 0;
@@ -203,23 +209,26 @@ body {
   color: white;
   text-align: center;
 }
-.carousel__cell:nth-child(6n+1) {
-  background-image: url('../public/img/fire/fire1.png');
+.cell6 {
+  display: block;
 }
-.carousel__cell:nth-child(6n+2) {
-  background-image: url('../public/img/fire/fire2.png');
+.carousel__cell:nth-child(6n + 1) {
+  background-image: url("../public/img/fire/fire1.png");
 }
-.carousel__cell:nth-child(6n+3) {
-  background-image: url('../public/img/fire/fire3.png');
+.carousel__cell:nth-child(6n + 2) {
+  background-image: url("../public/img/fire/fire2.png");
 }
-.carousel__cell:nth-child(6n+4) {
-  background-image: url('../public/img/fire/fire1.png');
+.carousel__cell:nth-child(6n + 3) {
+  background-image: url("../public/img/fire/fire3.png");
 }
-.carousel__cell:nth-child(6n+5) {
-  background-image: url('../public/img/fire/fire2.png');
+.carousel__cell:nth-child(6n + 4) {
+  background-image: url("../public/img/fire/fire1.png");
 }
-.carousel__cell:nth-child(6n+6) {
-  background-image: url('../public/img/fire/fire3.png');
+.carousel__cell:nth-child(6n + 5) {
+  background-image: url("../public/img/fire/fire2.png");
+}
+.carousel__cell:nth-child(6n + 6) {
+  background-image: url("../public/img/fire/fire3.png");
 }
 .carousel__cell:nth-child(1) {
   transform: rotateY(0deg) translateZ(30vw);
@@ -238,6 +247,24 @@ body {
 }
 .carousel__cell:nth-child(6) {
   transform: rotateY(300deg) translateZ(30vw);
+}
+.cell1 {
+  display: none;
+}
+.cell2 {
+  display: none;
+}
+.cell3 {
+  display: none;
+}
+.cell4 {
+  display: none;
+}
+.cell5 {
+  display: none;
+}
+.cell6 {
+  display: none;
 }
 .button {
   display: flex;

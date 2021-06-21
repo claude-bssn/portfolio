@@ -1,8 +1,15 @@
-.fireMain{
+.fireMain {
   height: 250vh;
   width: 100vw;
-  background: rgb(216,231,248);
-  background: linear-gradient(180deg, #d8e7f8 0%, #c9a6b0 15%, #a50e07 38%, #a50e07 100%);}
+  background: rgb(216, 231, 248);
+  background: linear-gradient(
+    180deg,
+    #d8e7f8 0%,
+    #c9a6b0 15%,
+    #a50e07 38%,
+    #a50e07 100%
+  );
+}
 .parallaxFire {
   height: 200vh;
   width: 100vw;
@@ -13,16 +20,17 @@
   z-index: -7;
 }
 .ambers {
-  background-image: url("../public/img/fire/ambersFull.png");
+  background: url("../public/img/fire/ambersFull.png");
   background-repeat: no-repeat;
   background-size: 200%;
-  background-position: center;
-  position: sticky;
-  z-index: -6;
-  top: 0;
+  background-position: bottom;
+  position: relative;
+  z-index: 2;
+  top: -24vh;
   bottom: -1vh;
   width: 100vw;
-  height: 120vh;
+  height: 200vh;
+  padding-top: 31vh;
 }
 .fire {
   position: relative;
@@ -32,11 +40,20 @@
   overflow: hidden;
   z-index: -1;
 }
+.flame {
+  z-index: -6;
+  position: sticky;
+
+  top: 0;
+  bottom: -1vh;
+  width: 100vw;
+  height: 100vh;
+}
 .pulse {
   -webkit-animation-name: pulse;
   animation-name: pulse;
-  -webkit-animation-duration: 7s  ;
-  animation-duration: 7s ;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -93,8 +110,7 @@
   width: 15vw;
   top: 8vh;
   left: -3vw;
-  z-index: 1
-  
+  z-index: 1;
 }
 .flame2 {
   width: 18vw;
@@ -107,24 +123,22 @@
 }
 .flame4 {
   width: 14vw;
-  
-  
 }
 .flame5 {
   width: 13vw;
-  top:3vh;
-    left: 3vw ;
+  top: 3vh;
+  left: 3vw;
   z-index: 1;
 }
 .flame6 {
   width: 14vw;
-  left :-5vw;
+  left: -5vw;
   top: 4vh;
-  z-index: 2
+  z-index: 2;
 }
 .flame7 {
   width: 17vw;
-  left:-3vw;
+  left: -3vw;
 }
 .flame8 {
   width: 16vw;
@@ -133,30 +147,28 @@
 .flame9 {
   width: 16vw;
   top: 7vh;
-  left:1vw
+  left: 1vw;
 }
 .flame10 {
   width: 14vw;
   top: 3vh;
-  left:9vw;
+  left: 9vw;
 }
 .flame11 {
   width: 14vw;
-    left:3vw;
-
+  left: 3vw;
 }
 .flame12 {
   width: 14vw;
   top: 5vh;
-  left:-3vw;
+  left: -3vw;
 }
 //###################
 
-* { box-sizing: border-box; }
-
-body {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
 }
+
 .scene {
   margin: 40px 0;
   position: absolute;
@@ -169,14 +181,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.buttonX{
+.buttonX {
   border: white solid 3px;
   border-radius: 50%;
-  height: 50px; 
+  height: 50px;
   width: 50px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   color: white;
   font-size: 30px;
   font-weight: bold;
@@ -189,7 +201,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateZ(-288px); 
+  transform: translateZ(-288px);
   transform-style: preserve-3d;
   transition: transform 1s;
 }
@@ -207,23 +219,26 @@ body {
   color: white;
   text-align: center;
 }
-.carousel__cell:nth-child(6n+1) {
-  background-image: url('../public/img/fire/fire1.png');
+.cell6{
+  display: block;
 }
-.carousel__cell:nth-child(6n+2) {
-  background-image: url('../public/img/fire/fire2.png');
+.carousel__cell:nth-child(6n + 1) {
+  background-image: url("../public/img/fire/fire1.png");
 }
-.carousel__cell:nth-child(6n+3) {
-  background-image: url('../public/img/fire/fire3.png');
+.carousel__cell:nth-child(6n + 2) {
+  background-image: url("../public/img/fire/fire2.png");
 }
-.carousel__cell:nth-child(6n+4) {
-  background-image: url('../public/img/fire/fire1.png');
+.carousel__cell:nth-child(6n + 3) {
+  background-image: url("../public/img/fire/fire3.png");
 }
-.carousel__cell:nth-child(6n+5) {
-  background-image: url('../public/img/fire/fire2.png');
+.carousel__cell:nth-child(6n + 4) {
+  background-image: url("../public/img/fire/fire1.png");
 }
-.carousel__cell:nth-child(6n+6) {
-  background-image: url('../public/img/fire/fire3.png');
+.carousel__cell:nth-child(6n + 5) {
+  background-image: url("../public/img/fire/fire2.png");
+}
+.carousel__cell:nth-child(6n + 6) {
+  background-image: url("../public/img/fire/fire3.png");
 }
 .carousel__cell:nth-child(1) {
   transform: rotateY(0deg) translateZ(30vw);
@@ -243,6 +258,24 @@ body {
 .carousel__cell:nth-child(6) {
   transform: rotateY(300deg) translateZ(30vw);
 }
+.cell1{
+  display: none;
+}
+.cell2{
+  display: none;
+}
+.cell3{
+  display: none;
+}
+.cell4{
+  display: none;
+}
+.cell5{
+  display: none;
+}
+.cell6{
+  display: none;
+}
 
 .button {
   display: flex;
@@ -251,19 +284,12 @@ body {
   width: 40vw;
   height: 20px;
   justify-content: space-between;
-  // left: -4vw;
-    section{
-      width: 100px;
-      
-    }
- 
-}
-// .next-button{
-//   display: flex;
-//   justify-content: flex-end;
-// }
-.arrow{
-  stroke: rgb(205, 60, 50);
-  stroke-width: 1px; 
+  section {
+    width: 100px;
+  }
 }
 
+.arrow {
+  stroke: rgb(205, 60, 50);
+  stroke-width: 1px;
+}

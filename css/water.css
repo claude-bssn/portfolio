@@ -2,19 +2,42 @@
   width: 100vw;
   height: 350vh;
   background: #a50e07;
-  background: linear-gradient(180deg, #a4130c 2%, #a50e07 13%, #00a6bb 49%, #6cbbcb 77%, #a1d1dc 100%);
+  background: linear-gradient(180deg, #a50e07 13%, #00a6bb 49%, #6cbbcb 77%, #a1d1dc 100%);
+  z-index: -1;
+  position: relative;
 }
 .parallaxWater {
-  padding-top: 150vh;
+  position: relative;
+  top: 150vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.waterline1 {
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
-.waterline1 {
-  margin-top: 40vh;
+.waterline1 > * {
+  transition: transform 250ms;
+}
+.waterline1 > *:hover {
+  transform: translateY(-30px);
+  z-index: 5;
 }
 .waterline2 {
-  margin-top: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  opacity: 0.3;
+  position: relative;
 }
 .waterline3 {
-  margin-top: 10vh;
+  margin-top: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  opacity: 0.1;
+  position: relative;
 }
