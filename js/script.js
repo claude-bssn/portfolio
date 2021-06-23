@@ -195,26 +195,69 @@ const indexDrop = 13;
 let waterline1 = document.querySelector('.waterline1');
 let waterline2 = document.querySelector('.waterline2');
 let waterline3 = document.querySelector('.waterline3');
+
+
 let topValue;
 let imgValue;
 var i = 0;
 function createImageNode(width, margin) {
-    var img = document.createElement('img');
+    let div = document.createElement('div') ;
+    let img = document.createElement('img');
     img.src = `./public/img/water/water${imgValue}.png`;
     img.style.width = `${width}vw`;
     img.style.margin = `1vw ${margin}vw`;
-    img.style.position = 'relative';
-    img.style.top = `${topValue}px`;
-    img.classList.add(`triangle${i}`);
-    return img;
+    div.style.position = 'relative';
+    div.style.top = `${topValue}px`;
+    div.classList.add('tooltip',`triangle${i}`);
+    div.appendChild(img);
+    return div;
 };
+function createIconNode(div) {
+    let icon = document.createElement('div');
+    icon.style.background = `url("./public/img/water/icon/icon${i}.png")`;
+    icon.style.position = 'absolute';
+    icon.style.top = '27px';
+    icon.style.left = '10px';
+    icon.style.width = '5vw';
+    icon.style.height = '5vw';
+    icon.style.backgroundSize = 'cover';
+    icon.style.backgroundPosition = 'center';
+    icon.classList.add('icon', `icon${i}`);
+
+    div.prepend(icon);
+    // console.log(top);
+    return div;
+}
+function createTooltipNode(div) {
+    let toolTip = document.createElement('div');
+    let h1 = document.createElement('h1');
+    let p = document.createElement('p');
+    
+    h1.innerHTML = 'toto'
+    p.innerHTML = 'coucou';
+    toolTip.classList.add('tooltiptext', 'waterInfo');
+    toolTip.append(h1, p);
+    div.appendChild(toolTip);
+    return div;
+}
 function rand(top) {
     topValue = Math.floor(Math.random() * `${top}`);
     imgValue = Math.floor(Math.random() * 3 + 1);
 }
 for (i = 0; i < indexDrop; i++){
+    let div = waterline1.lastChild;
     rand(60);
     waterline1.appendChild(createImageNode(11, -2));
+    if (div == null) {
+        div = waterline1.firstChild;
+        createIconNode(div);
+        createTooltipNode(div);
+    } else {
+        div = waterline1.lastChild;
+        createIconNode(div);
+        createTooltipNode(div);
+    }
+    
     rand(73);
     waterline2.appendChild(createImageNode(8, -1.6));
     if (i%2 == 0) {
@@ -225,8 +268,7 @@ for (i = 0; i < indexDrop; i++){
     waterline3.appendChild(createImageNode(6, -1.2));
     rand(75);
     waterline3.appendChild(createImageNode(6, -1.2));
+    
+    // console.log(topValue);
+    
 };
-// ############### water hover ###############
-// const triangle = document.querySelector('.waterline1');
-// let children = triangle.children;
-// console.log(children);

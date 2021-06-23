@@ -1,0 +1,22 @@
+.air {
+  height: 350vh;
+  width: 100vw;
+  z-index: -7;
+  position: relative;
+}
+.parallaxAir {
+  height: 350vh;
+  width: 100vw;
+  z-index: -7;
+  position: relative;
+}
+.airBg {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f4b7a8;
+  background: linear-gradient(180deg, #f4b7a8 2%, #dcc7d0 27%, #fad895 62%, #f4b38a 82%, #824f6e 100%);
+  z-index: -6;
+}

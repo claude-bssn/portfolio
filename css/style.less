@@ -1,330 +1,315 @@
-*
-{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-html{
-    scrollbar-width: none;
-    width: 100vw;
-    scroll-behavior: smooth;
+html {
+  scrollbar-width: none;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
-header
-{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    /* display: grid; */
-    /* grid-template-rows: 50 50; */
-    z-index: 1;
-
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  /* display: grid; */
+  /* grid-template-rows: 50 50; */
+  z-index: 1;
 }
-.slice1
-{  
-    font-size: 5.5rem;
-    justify-content: center;
-    align-items: flex-end;
-    position: fixed;
-    top: 0px;
+.slice1 {
+  font-size: 5.5rem;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  top: 0px;
 }
-.slice2
-{
-    font-size:40px;
-    justify-content: flex-end;
-    position: fixed;
-    bottom: 0px;
+.slice2 {
+  font-size: 40px;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0px;
 }
-.slice{
-    color: gray;
-    background-color: rgb(28, 28, 36);
-    display: grid;
-    width: 100vw;
-    height: 50vh;
-    opacity: 1;
-    
+.slice {
+  color: gray;
+  background-color: rgb(28, 28, 36);
+  display: grid;
+  width: 100vw;
+  height: 50vh;
+  opacity: 1;
 }
-.slice2>p {
-    margin-left: 40vh;
-    margin-right: 10vh;
+.slice2 > p {
+  margin-left: 40vh;
+  margin-right: 10vh;
 }
 
-
-main{
-    height: 100vh;
+main {
+  height: 100vh;
 }
 
-.parallax{
-    height:140vh;
-    width: 100vw;
-    background-image : url("../public/img/Rectangle.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    // linear-gradient(-0.53deg, rgba(216, 231, 248, 1) 0%, rgba(162, 207, 238, 1) 17.82%, rgba(105, 183, 227, 1) 38.92%, rgba(60, 163, 219, 1) 58.45%, rgba(27, 149, 213, 1) 75.76%, rgba(7, 140, 209, 1) 90.2%, rgba(0, 137, 208, 1) 100%);
-    // opacity : 0.81;
-    // z-index: -5;
-    position: sticky;
-    top: 0;
-    z-index: -7;
-
+.parallax {
+  height: 140vh;
+  width: 100vw;
+  background-image: url("../public/img/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // linear-gradient(-0.53deg, rgba(216, 231, 248, 1) 0%, rgba(162, 207, 238, 1) 17.82%, rgba(105, 183, 227, 1) 38.92%, rgba(60, 163, 219, 1) 58.45%, rgba(27, 149, 213, 1) 75.76%, rgba(7, 140, 209, 1) 90.2%, rgba(0, 137, 208, 1) 100%);
+  // opacity : 0.81;
+  // z-index: -5;
+  position: sticky;
+  top: 0;
+  z-index: -7;
 }
-.grain{
-    content: '';
-display: block;
-background: url(../public/img/filter/cardboard.png) ;
-height: inherit;
-position: sticky;
-top: 0;
-bottom: -0vh;
+.grain {
+  content: "";
+  display: block;
+  background: url(../public/img/filter/cardboard.png);
+  height: inherit;
+  width: inherit;
+  position: sticky;
+  top: 0;
+  bottom: -0vh;
 }
-.earth{
-    position: relative;
-    height: 200vh;
-    width: 100vw;
-    display: flex;
-    overflow: hidden;
-    z-index: -1;
+.earth {
+  position: relative;
+  height: 200vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  z-index: -1;
 }
-.island{
-    // height: 100vh;
-    margin-top: 50vh;
-    position: absolute;
-    max-height: 100%;
-    margin-top: 45vh;
-
+.island {
+  // height: 100vh;
+  margin-top: 50vh;
+  position: absolute;
+  max-height: 100%;
+  margin-top: 45vh;
 }
 .island12 {
-    // height: 70vh;
-    width: 44vw;
-    filter: blur(2px);
-    left: -335px;
-    
+  // height: 70vh;
+  width: 44vw;
+  filter: blur(2px);
+  left: -335px;
 }
-.island13{
-    // height: 85vh;
-    width: 56vw;
-    filter: blur(2px);
-    right: -425px;
-    margin-top: 32vh;
+.island13 {
+  // height: 85vh;
+  width: 56vw;
+  filter: blur(2px);
+  right: -425px;
+  margin-top: 32vh;
 }
-.island1{
-    // height: 60vh;
-    width: 35vw;
-    right: -3%;
-    margin-top: 86vh;
-    z-index: -1;
-
-}   
-.island2{
-    // height: 60vh;
-    width: 35vw;
-    margin-top: 100vh;
-    z-index: -1;
+.island1 {
+  // height: 60vh;
+  width: 35vw;
+  right: -3%;
+  margin-top: 86vh;
+  z-index: -1;
 }
-.island3{
-    // height: 30vh;
-    width: 20vw;
-    right: 30%;
-    margin-top: 98vh;
-    z-index: -1;
+.island2 {
+  // height: 60vh;
+  width: 35vw;
+  margin-top: 100vh;
+  z-index: -1;
 }
-.island4{
-    // height: 30vh;
-    width: 17vw;
-    right: 23%;
-    margin-top: 95vh;
-    z-index: -2;
+.island3 {
+  // height: 30vh;
+  width: 20vw;
+  right: 30%;
+  margin-top: 98vh;
+  z-index: -1;
+}
+.island4 {
+  // height: 30vh;
+  width: 17vw;
+  right: 23%;
+  margin-top: 95vh;
+  z-index: -2;
 }
 .island5 {
-    // height: 22vh;
-    width: 13vw;
-    right: 16%;
-    margin-top: 90vh;
-    z-index: -3;
+  // height: 22vh;
+  width: 13vw;
+  right: 16%;
+  margin-top: 90vh;
+  z-index: -3;
 }
-.island6{
-    // height: 14vh;
-    width: 8vw;
-    right: 25%;
-    margin-top: 92vh;
-    z-index: -4;
+.island6 {
+  // height: 14vh;
+  width: 8vw;
+  right: 25%;
+  margin-top: 92vh;
+  z-index: -4;
 }
-.island7{
-    // height: 30vh;
-    width: 17vw;
-    left: 18%;
-    margin-top: 95vh;
-    z-index: -2;
-
+.island7 {
+  // height: 30vh;
+  width: 17vw;
+  left: 18%;
+  margin-top: 95vh;
+  z-index: -2;
 }
-.island8{
-    // height: 30vh;
-    width: 17vw;
-    left: 11%;
-    margin-top: 94vh;
-    z-index: -3;
-
+.island8 {
+  // height: 30vh;
+  width: 17vw;
+  left: 11%;
+  margin-top: 94vh;
+  z-index: -3;
 }
-.island9{
-    // height: 25vh;
-    width: 14vw;
-    left: 26%;
-    margin-top: 93vh;
-    z-index: -4;
+.island9 {
+  // height: 25vh;
+  width: 14vw;
+  left: 26%;
+  margin-top: 93vh;
+  z-index: -4;
 }
-.island10{
-    // height: 22vh;
-    width: 13vw;
-    left: 33%;
-    margin-top: 89vh;
-    z-index: -5;
-
+.island10 {
+  // height: 22vh;
+  width: 13vw;
+  left: 33%;
+  margin-top: 89vh;
+  z-index: -5;
 }
-.island11{
-    // height: 15vh;
-    width: 8vw;
-    left: 41%;
-    margin-top: 93vh;
-    z-index: -6;
+.island11 {
+  // height: 15vh;
+  width: 8vw;
+  left: 41%;
+  margin-top: 93vh;
+  z-index: -6;
 }
 
-#flower1{
-    position: absolute;
-    width: 140px;
-    // right:  31%;
-    // margin-top: 90vh;
-    z-index: 3;
+#flower1 {
+  position: absolute;
+  width: 140px;
+  // right:  31%;
+  // margin-top: 90vh;
+  z-index: 3;
 }
-#flower2{
-    position: absolute;
-    width: 100px;
-    // right: 20%;
-    // margin-top: 85vh;
-    z-index: 3;
+#flower2 {
+  position: absolute;
+  width: 100px;
+  // right: 20%;
+  // margin-top: 85vh;
+  z-index: 3;
 }
-#flower3{
-    position: absolute;
-    width: 140px;
-    // left: 35%;
-    // margin-top: 84vh;
-    z-index: 3;
+#flower3 {
+  position: absolute;
+  width: 140px;
+  // left: 35%;
+  // margin-top: 84vh;
+  z-index: 3;
 }
-#flower4{
-    position: absolute;
-    width: 115px;
-    // left: 25%;
-    // margin-top: 81vh;
-    z-index: 3;
+#flower4 {
+  position: absolute;
+  width: 115px;
+  // left: 25%;
+  // margin-top: 81vh;
+  z-index: 3;
 }
 
 /* Tooltip container */
-.tooltipPos1{
-    margin-top: 91vh;
-    // width: 10vw;
-    // right:  25%;
-    // right: 30%;
+.tooltipPos1 {
+  margin-top: 91vh;
+  // width: 10vw;
+  // right:  25%;
+  // right: 30%;
 }
-.tooltipPos2{
-    margin-top: 86vh;
-    // right: 23%;
-
+.tooltipPos2 {
+  margin-top: 86vh;
+  // right: 23%;
 }
-.tooltipPos3{
-    margin-top: 87vh;
+.tooltipPos3 {
+  margin-top: 87vh;
 }
-.tooltipPos4{
-    margin-top: 83vh;
-
+.tooltipPos4 {
+  margin-top: 83vh;
 }
 .tooltip {
-    position: absolute;
-    display: inline-block;
-    // border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-    z-index: 10;
-    // margin-top: 90vh;
-    // right: 30%;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  display: inline-block;
+  // border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  z-index: 10;
+  // margin-top: 90vh;
+  // right: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
-visibility: hidden;
-width: 250px;
-background-color: rgba(85, 85, 85, 0.434);
-color: #fff;
-text-align: left;
-padding: 5px 5px;
-border-radius: 6px;
+  visibility: hidden;
+  width: 250px;
+  background-color: rgba(85, 85, 85, 0.434);
+  color: #fff;
+  text-align: left;
+  padding: 5px 5px;
+  border-radius: 6px;
 
-/* Position the tooltip text */
-position: absolute;
-z-index: 1;
-bottom: 125%;
-// left: 50%;
-// margin-left: -60px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  // left: 50%;
+  // margin-left: -60px;
 
-/* Fade in tooltip */
-opacity: 0;
-transition: opacity 1s;
-a{
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+  a {
     // text-decoration: none;
     color: white;
-}
+  }
 }
 
 /* Tooltip arrow */
 .tooltip .tooltiptext::after {
-content: "";
-position: absolute;
-top: 100%;
-left: 50%;
-margin-left: -5px;
-border-width: 5px;
-border-style: solid;
-border-color: #555 transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-visibility: visible;
-opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
-.clouds{
-    position: relative;
-    z-index: -6;
-    margin-top: 10vh;
+.clouds {
+  position: relative;
+  z-index: -6;
+  margin-top: 10vh;
 }
-.cloud{
-    position: absolute;
+.cloud {
+  position: absolute;
 }
 
-.cloud1{
-    width: 50vw;
-    left: 5%;
+.cloud1 {
+  width: 50vw;
+  left: 5%;
 }
-.cloud2{
-    width: 41vw;
-    left: 37%;
-    margin-top: 24vh;
+.cloud2 {
+  width: 41vw;
+  left: 37%;
+  margin-top: 24vh;
 }
-.cloud3{
-    width: 27vw;
-    left: 3%;
-    margin-top: 53vh;
+.cloud3 {
+  width: 27vw;
+  left: 3%;
+  margin-top: 53vh;
 }
-.cloud4{
-    width: 30vw;
-    left: 59%;
-    margin-top: 60vh;
+.cloud4 {
+  width: 30vw;
+  left: 59%;
+  margin-top: 60vh;
 }
-.cloud5{
-    width: 47vw;
-    left: 8%;
-    margin-top: 70vh;
+.cloud5 {
+  width: 47vw;
+  left: 8%;
+  margin-top: 70vh;
 }
-.cloud6{
-    width: 40vh;
-    left: 65%;
-    margin-top: 10vh;
+.cloud6 {
+  width: 40vh;
+  left: 65%;
+  margin-top: 10vh;
 }
