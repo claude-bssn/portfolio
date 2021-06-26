@@ -21,33 +21,32 @@ window.addEventListener('scroll', () => {
     let scrollPoss = scrolled.top * 0.5;
     
         
-        const background = document.querySelectorAll(".island12, .island13");
-        background.forEach((img) => {
-            img.style.top = (scrollPoss) + "px";
-        })
+    const background = document.querySelectorAll(".island12, .island13");
+    background.forEach((img) => {
+        img.style.top = (scrollPoss) + "px";
+    });
         const background2 = document.querySelectorAll(".island1, .island2");
-        background2.forEach((img) => {
-            img.style.top = (scrollPoss*2) + "px";
-        })
+    background2.forEach((img) => {
+        img.style.top = (scrollPoss * 2) + "px";
+    });
         const background3 = document.querySelectorAll(".island3, .island7");
-        background3.forEach((img) => {
-            img.style.top = (scrollPoss*2.5) + "px";
-        })
+    background3.forEach((img) => {
+        img.style.top = (scrollPoss * 2.5) + "px";
+    });
         const background4 = document.querySelectorAll(".island4, .island8");
-        background4.forEach((img) => {
-            img.style.top = (scrollPoss*3) + "px";
-        })
+    background4.forEach((img) => {
+        img.style.top = (scrollPoss * 3) + "px";
+    });
         const background5 = document.querySelectorAll(".island5, .island9, .island10");
-        background5.forEach((img) => {
-            img.style.top = (scrollPoss*3.5) + "px";
-        })
+    background5.forEach((img) => {
+        img.style.top = (scrollPoss * 3.5) + "px";
+    });
         const background6 = document.querySelectorAll(".island6, .island11");
-        background6.forEach((img) => {
-            img.style.top = (scrollPoss*4) + "px";
-        })
-        const cloud = document.querySelector(".clouds");
-        cloud.style.top = (scrollPoss*0.5) + "px";    
-    
+    background6.forEach((img) => {
+        img.style.top = (scrollPoss * 4) + "px";
+    });
+    const cloud = document.querySelector(".clouds");
+    cloud.style.top = (scrollPoss * 0.5) + "px";    
     
     let earth = scrolled.top;
     
@@ -71,16 +70,40 @@ window.addEventListener('scroll', () => {
 
     // ############### parallax water ############### 
 
-    let parallaxWater = document.querySelector('.parallaxWater');
+    const parallaxWater = document.querySelector('.parallaxWater');
     let scrolledWater = parallaxWater.getBoundingClientRect();
-    let scrollWater = scrolledWater.top * 0.5 ;
+    let water = scrolledWater.top * 0.5 ;
         
     const backwater = document.querySelector(".waterline2");
-    backwater.style.top = (scrollWater * 0.3) + "px";
+    backwater.style.top = (water * 0.3) + "px";
         
     const backwater2 = document.querySelector(".waterline3");
-    backwater2.style.top = (scrollWater * 0.4) + "px";
-    console.log(scrollWater);
+    backwater2.style.top = (water * 0.4) + "px";
+    // console.log(Water);
+
+    // ############### parallax air ############### 
+    let mountain1 = document.querySelector(".mountain1");
+    const mountain2 = document.querySelector(".mountain2");
+    const mountain3 = document.querySelector(".mountain3");
+    const mountain4 = document.querySelector(".mountain4");
+    const parallaxAir = document.querySelector(".air");
+    let scrollAir = parallaxAir.getBoundingClientRect();
+    let air = scrollAir.top;
+
+    const parallaxWord = document.querySelector('.parallaxWord')
+    let word = scrollAir.top / 10;
+    
+    console.log(air);
+    console.log(word+'word');
+    if (air < 0 && air > -950) {
+        mountain1.style.paddingLeft = Math.abs(air * 0.4) + 'px';
+        mountain2.style.paddingLeft = Math.abs(air) + 'px';
+        mountain3.style.paddingRight = Math.abs(air * 0.2) + 'px';
+        mountain4.style.paddingRight = Math.abs(air) + 'px';
+    } else if (air < -950) {
+        air = -950;
+        parallaxWord.style.bottom = ((Math.abs(word )-200)) + 'vh';
+    }
 
 }, false);
 
@@ -136,7 +159,7 @@ let selectedIndex = 0;
 let cell = 1;
 document.querySelector(`.cell${cell}`).style.display = 'block';
 
-console.log(cell);
+// console.log(cell);
 
 function rotateCarousel() {
   let angle = selectedIndex / cellCount * -360;
@@ -180,7 +203,7 @@ nextButton.addEventListener( 'click', function() {
         cell = 1
     }
     // console.log(cell);
-    console.log(cell);
+    // console.log(cell);
     document.querySelector(`.cell${cell}`).style.display = 'block';
     document.querySelector(`.cell${cell - 1}`).style.display = 'none';
     document.querySelector(`.cell${cell + 1}`).style.display = 'none';
@@ -257,7 +280,6 @@ for (i = 0; i < indexDrop; i++){
         createIconNode(div);
         createTooltipNode(div);
     }
-    
     rand(73);
     waterline2.appendChild(createImageNode(8, -1.6));
     if (i%2 == 0) {
@@ -268,7 +290,5 @@ for (i = 0; i < indexDrop; i++){
     waterline3.appendChild(createImageNode(6, -1.2));
     rand(75);
     waterline3.appendChild(createImageNode(6, -1.2));
-    
     // console.log(topValue);
-    
 };

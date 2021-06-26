@@ -1,14 +1,62 @@
 .air {
-  height: 350vh;
   width: 100vw;
+  height: 1000vh;
   z-index: -7;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+.air .parallaxWord {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: -80vh;
+  z-index: 0;
+}
+.air .parallaxWord span {
+  font-size: 10vw;
+  margin: 0px 0px 60vh 0px;
+  align-self: center;
+}
+.words {
+  height: 50vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 .parallaxAir {
-  height: 350vh;
+  height: 100vh;
   width: 100vw;
-  z-index: -7;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   position: relative;
+}
+.parallaxAir img {
+  height: 90vh;
+  position: absolute;
+  bottom: -3vh;
+}
+.parallaxAir .mountain1 {
+  height: 65vh;
+  bottom: 15vh;
+  opacity: 0.8;
+  filter: blur(8px);
+}
+.parallaxAir .mountain2 {
+  z-index: 2;
+}
+.parallaxAir .mountain3 {
+  height: 70vh;
+  bottom: 5vh;
+  filter: blur(5px);
+}
+.parallaxAir .mountain4 {
+  height: 80vh;
+  bottom: 0vh;
+  z-index: 1;
 }
 .airBg {
   position: sticky;
@@ -19,4 +67,8 @@
   background: #f4b7a8;
   background: linear-gradient(180deg, #f4b7a8 2%, #dcc7d0 27%, #fad895 62%, #f4b38a 82%, #824f6e 100%);
   z-index: -6;
+  top: 0;
+}
+.contact {
+  width: 100vw;
 }
