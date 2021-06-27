@@ -13,31 +13,6 @@ window.addEventListener('scroll', () => {
         }
     })
 
-// ############### menu burger ############### 
-    let burger = document.querySelector('#burger');
-    burger.addEventListener('click', () => {
-        let burgerChanged = burger.className;
-        console.log(burgerChanged);
-        if (burgerChanged === 'change') {
-            console.log('bye');
-            burger.classList.remove('change');
-            return;
-        }
-        if (!burgerChanged) {
-            console.log('click');
-            burger.classList.add('change');
-            return;
-        }
-        
-    })
-    
-    
-    
-    
-    
-    
-    
-    
 // ############### parallax earth ############### 
     let box = document.querySelector('.parallaxEarth');
     let scrolled = box.getBoundingClientRect();
@@ -155,6 +130,22 @@ window.addEventListener('scroll', () => {
 
 }, false);
 
+// ############### menu burger ############### 
+
+let burger = document.querySelector('#burger');
+    burger.addEventListener('click', () => {
+        let burgerChanged = burger.className;
+        console.log(burgerChanged);
+        if (burgerChanged === 'change') {
+            console.log('bye');
+            burger.classList.remove('change');
+        }
+        if (burgerChanged === "" || !burgerChanged) {
+            console.log('click');
+            burger.classList.add('change');
+        }
+        
+    })
 // ############### flower animation ############### 
 
 $(document).ready(function(){
