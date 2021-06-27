@@ -1,0 +1,87 @@
+.contact {
+    width: 100vw;
+    height: 180vh;
+    // background-color: linear-gradient( #824f6e 0% #fff1eb 20%, #ace0f9 100%);
+    background: linear-gradient(180deg, #824f6e 0%, #fff1eb 40%, #ace0f9 100%);
+    display: flex;
+    justify-content: center;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20vh;
+    *{
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: none;
+
+
+    }
+    input{
+        height: 50px;
+        background: #fffdfd78;
+    }
+    textarea{
+        background: #fffdfd78;
+    }
+    
+
+}
+
+.formCont {
+    display: flex;
+    justify-content: center;
+}
+.custom-btn {
+    width: 22vw;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid goldenrod;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+.btn {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 10px;
+    color: goldenrod;
+  }
+  .btn:hover {
+    background: rgba(218, 165, 32, 0.562);
+    color: rgba(255, 255, 255, 0.726);
+  }
+  .btn:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn1 5s ease-in-out infinite;
+  }
+  .btn:active{
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.2),
+      inset 4px 4px 6px 0 rgba(238, 195, 6, 0.2);
+  }
+  
+  
+  @-webkit-keyframes shiny-btn1 {
+      0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+      80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+      81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+      100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  

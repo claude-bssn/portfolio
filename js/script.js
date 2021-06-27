@@ -1,9 +1,7 @@
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     const rec = header.getBoundingClientRect();
-    // console.log(rec);
     const position = rec.bottom / window.innerHeight * 100;
-    // console.log(document.getElementsByClassName('slice'));
     document.querySelectorAll('.slice').forEach((div) => {
         div.style.height = `${position / 2}%`;
         if (position <= 1) {
@@ -13,8 +11,33 @@ window.addEventListener('scroll', () => {
             document.querySelector('.nameTitle').style.display = 'block';
 
         }
-        // console.log(`${position}%`);
     })
+
+// ############### menu burger ############### 
+    let burger = document.querySelector('#burger');
+    burger.addEventListener('click', () => {
+        let burgerChanged = burger.className;
+        console.log(burgerChanged);
+        if (burgerChanged === 'change') {
+            console.log('bye');
+            burger.classList.remove('change');
+            return;
+        }
+        if (!burgerChanged) {
+            console.log('click');
+            burger.classList.add('change');
+            return;
+        }
+        
+    })
+    
+    
+    
+    
+    
+    
+    
+    
 // ############### parallax earth ############### 
     let box = document.querySelector('.parallaxEarth');
     let scrolled = box.getBoundingClientRect();
@@ -51,17 +74,14 @@ window.addEventListener('scroll', () => {
     let earth = scrolled.top;
     
     if(earth < -150){
-        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.remove('bounce-4');
     })} 
     else if(earth < -41.85){
-        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.add('bounce-4');
     })
     }else if(earth > -41.85 ){
-        // console.log(earth);
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.remove('bounce-4');
     })
@@ -79,10 +99,9 @@ window.addEventListener('scroll', () => {
         
     const backwater2 = document.querySelector(".waterline3");
     backwater2.style.top = (water * 0.4) + "px";
-    // console.log(Water);
 
     // ############### parallax air ############### 
-    let mountain1 = document.querySelector(".mountain1");
+    const mountain1 = document.querySelector(".mountain1");
     const mountain2 = document.querySelector(".mountain2");
     const mountain3 = document.querySelector(".mountain3");
     const mountain4 = document.querySelector(".mountain4");
@@ -90,20 +109,49 @@ window.addEventListener('scroll', () => {
     let scrollAir = parallaxAir.getBoundingClientRect();
     let air = scrollAir.top;
 
-    const parallaxWord = document.querySelector('.parallaxWord')
+    const parallaxWord = document.querySelector('.parallaxWord');
     let word = scrollAir.top / 10;
     
-    console.log(air);
-    console.log(word+'word');
     if (air < 0 && air > -950) {
         mountain1.style.paddingLeft = Math.abs(air * 0.4) + 'px';
         mountain2.style.paddingLeft = Math.abs(air) + 'px';
         mountain3.style.paddingRight = Math.abs(air * 0.2) + 'px';
         mountain4.style.paddingRight = Math.abs(air) + 'px';
-    } else if (air < -950) {
+    } else if (air <= -950) {
         air = -950;
-        parallaxWord.style.bottom = ((Math.abs(word )-200)) + 'vh';
+        mountain1.style.paddingLeft = Math.abs(air * 0.4) + 'px';
+        mountain2.style.paddingLeft = Math.abs(air) + 'px';
+        mountain3.style.paddingRight = Math.abs(air * 0.2) + 'px';
+        mountain4.style.paddingRight = Math.abs(air) + 'px';
+        parallaxWord.style.bottom = ((Math.abs(word) - 155)) + 'vh';
     }
+    console.log(air);
+    let words = document.querySelectorAll('#word1, #word2, #word3');
+    let halfVh = (window.innerHeight) * 0.5;
+ 
+    words.forEach((wordEl) => {
+        
+        let selectWord = document.querySelector(`#${wordEl.id}`);
+        let poss = selectWord.getBoundingClientRect();
+        let wordTop = poss.top - 50;
+        let wordBttm = poss.bottom;
+        let realBttm = wordBttm - halfVh;
+
+        if (realBttm < 130 ) {
+            wordEl.classList.add('fade-in');
+        }
+        else if (realBttm >130  ) {
+            wordEl.classList.remove('fade-in');
+        }
+        if (wordTop < 0) {
+            wordEl.classList.remove('fade-in');
+            wordEl.classList.add('fade-out');
+        }
+        if (wordTop > 0  ) {
+            wordEl.classList.remove('fade-out');
+        }
+
+    })
 
 }, false);
 
@@ -129,13 +177,15 @@ let fire = document.querySelector('.fire');
 let buttonX = document.querySelector('.buttonX');
 let scene = document.querySelector('.scene');
 let sceneBG = document.querySelector('.flame');
+let ambers = document.querySelector('.ambers');
 
 fire.addEventListener('click', () => {
     if (fire.style.display="flex"){
         fire.style.display ='none';
         scene.style.display = 'flex';
-        sceneBG.style.background = '#000000ab';
-        sceneBG.style.position = 'fixed';
+        sceneBG.style.position = 'sticky';
+        ambers.style.background = 'linear-gradient(180deg, rgba(254,252,253,0) 5%, rgba(28,28,28,0.45) 15%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.45) 70%, rgba(254,252,253,0) 100%)';
+        ambers.style.maskImage = 'none';
     }
 }
 )
@@ -144,9 +194,9 @@ buttonX.addEventListener('click', () => {
     if (fire.style.display="none"){
         fire.style.display ='flex';
         scene.style.display ='none';
-        sceneBG.style.background = 'transparent';
         sceneBG.style.position = 'sticky';
-
+        ambers.style.removeProperty('background');
+        ambers.style.maskImage = 'linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 15%, #000000 30%)';
     }
 
 }
@@ -159,7 +209,6 @@ let selectedIndex = 0;
 let cell = 1;
 document.querySelector(`.cell${cell}`).style.display = 'block';
 
-// console.log(cell);
 
 function rotateCarousel() {
   let angle = selectedIndex / cellCount * -360;
@@ -180,7 +229,6 @@ prevButton.addEventListener( 'click', function() {
         cell = 6;
 
     }
-    // console.log(cell);
     console.log(cell);
     document.querySelector(`.cell${cell}`).style.display = 'block';
     document.querySelector(`.cell${cell + 1}`).style.display = 'none';
@@ -202,8 +250,7 @@ nextButton.addEventListener( 'click', function() {
     } else if (cell == 0) {
         cell = 1
     }
-    // console.log(cell);
-    // console.log(cell);
+    
     document.querySelector(`.cell${cell}`).style.display = 'block';
     document.querySelector(`.cell${cell - 1}`).style.display = 'none';
     document.querySelector(`.cell${cell + 1}`).style.display = 'none';

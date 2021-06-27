@@ -1,0 +1,24 @@
+#burger {
+  position: fixed;
+  right: 2vw;
+  top: 3vw;
+  z-index: 1;
+}
+#burger .bar {
+  width: 35px;
+  box-shadow: 0px 0px 5px #ffffff, 0px 0px 10px rgba(255, 255, 255), 0px 0px 20px #228dff3f, 0px 0px 25px #228dff62, 0px 0px 30px #228dff6b, 0px 0px 5px #ffffff inset, 0px 0px 10px rgba(255, 255, 255) inset, 0px 0px 20px #228dffad inset, 0px 0px 25px #228dffb1 inset, 0px 0px 30px #228dff9a inset;
+  margin: 6px 0;
+  border: 2px solid whitesmoke;
+  transition: 0.4s;
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -6px);
+}

@@ -25,6 +25,7 @@
   width: 100vw;
   height: 200vh;
   padding-top: 31vh;
+  mask-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 15%, #000000 30%);
 }
 .fire {
   position: relative;
@@ -204,7 +205,6 @@
   left: 10px;
   top: 10px;
   line-height: 116px;
-  font-size: 80px;
   font-weight: bold;
   color: white;
   text-align: center;

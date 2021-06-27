@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/burger.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/earth.css">
     <link rel="stylesheet" href="./css/fire.css">
     <link rel="stylesheet" href="./css/water.css">
     <link rel="stylesheet" href="./css/air.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <script src="./js/script.js" defer></script>
     <script src="./js/jquery.js"></script>
     <title>Claude Buisson</title>
@@ -30,7 +32,11 @@
 
     </header>
     <main>
-
+        <div id="burger">
+            <div class="bar1 bar"></div>
+            <div class="bar2 bar"></div>
+            <div class="bar3 bar"></div>
+        </div>
         <div class="rainbow">
             <div class="gradient">
                 <div class="grain">
@@ -51,8 +57,18 @@
                                 <img class="img3 miniIsland" src="public/img/fire/fire3.png" alt="Fire Triangle">
                             </div>
                         </a>
-                        <div class="img4 dote" alt=""></div>
-                        <div class="img5 dote" alt=""></div>
+                        <a href="#water">
+                            <div class="img5 dote" alt="">
+                                <img class="img5 miniIsland" src="public/img/water/water4.png" alt="Fire Triangle">
+                            </div>
+                        </a>
+                        <a href="#air">
+                            <div class="img4 dote" alt="">
+                                <img class="img4 miniIsland" src="public/img/air/air.png" alt="Fire Triangle">
+                            </div>
+                        </a>
+                        
+                        
 
                     </div>
 
@@ -255,10 +271,10 @@
         <!-- ###################################water##################################### -->
         <div class="water">
             <div class="grain">
-                <div class="parallaxWater">
-                    <div class="waterline3"></div>
+                <div class="parallaxWater" id="water">
+                    <div class="waterline3" ></div>
                     <div class="waterline2"></div>
-                    <div class="waterline1"></div>
+                    <div class="waterline1" ></div>
                 </div>
             </div>
         </div>
@@ -271,12 +287,12 @@
                         <img src="./public/img/air/air.png" alt="" class="mountain2">
                         <img src="./public/img/air/air.png" alt="" class="mountain3">
                         <img src="./public/img/air/air.png" alt="" class="mountain4">
-                        <div class="words">
-                        <div class="parallaxWord">
+                        <div class="words" id="air">
+                        <div class="parallaxWord" >
 
-                            <span class="word1">coucou</span>
-                            <span class="word2">C'est</span>
-                            <span class="word3">MOI</span>
+                            <span id="word1">coucou</span>
+                            <span id="word2">C'est</span>
+                            <span id="word3">MOI</span>
                         </div> 
                     </div>
                     </div>
@@ -284,7 +300,19 @@
             </div>
         </div>
         <div class="contact">
+            <div class="grain">
+                <div class="formCont">
+                    <form action="">
+                        <label for="">Nom</label>
+                        <input type="text">
+                        <label for="">Mail</label>
+                        <input type="text">
+                        <label for="">Message</label><textarea name="" id="" cols="50" rows="10"></textarea>
+                        <button class="btn custom-btn ">Envoyer</button>
+                    </form>
+                </div>
 
+            </div>
         </div>
     </main>
     <footer>
