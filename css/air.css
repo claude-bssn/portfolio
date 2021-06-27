@@ -1,6 +1,6 @@
 .air {
   width: 100vw;
-  height: 700vh;
+  height: 1000vh;
   z-index: -7;
   position: relative;
   display: flex;
@@ -68,6 +68,9 @@
   background: linear-gradient(180deg, #f4b7a8 2%, #dcc7d0 27%, #fad895 62%, #f4b38a 82%, #824f6e 100%);
   z-index: -6;
   top: 0;
+}
+.contact {
+  width: 100vw;
 }
 .fade-in {
   -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;

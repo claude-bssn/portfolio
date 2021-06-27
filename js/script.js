@@ -56,7 +56,8 @@ window.addEventListener('scroll', () => {
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.add('bounce-4');
     })
-    }else if(earth > -41.85 ){
+    }
+    else if (earth > -150) {
     document.querySelectorAll('#flower1, #flower2, #flower3, #flower4').forEach((img) =>{
         img.classList.remove('bounce-4');
     })
@@ -100,8 +101,8 @@ window.addEventListener('scroll', () => {
         mountain4.style.paddingRight = Math.abs(air) + 'px';
         parallaxWord.style.bottom = ((Math.abs(word) - 155)) + 'vh';
     }
-    console.log(air);
-    let words = document.querySelectorAll('#word1, #word2, #word3');
+    // console.log(air);
+    let words = document.querySelectorAll('#word1, #word2, #word3, #word4, #word5, #word6');
     let halfVh = (window.innerHeight) * 0.5;
  
     words.forEach((wordEl) => {
@@ -132,17 +133,25 @@ window.addEventListener('scroll', () => {
 
 // ############### menu burger ############### 
 
-let burger = document.querySelector('#burger');
+const burger = document.querySelector('#burger');
+const burgerNav = document.querySelector('.burgerNav');
     burger.addEventListener('click', () => {
         let burgerChanged = burger.className;
         console.log(burgerChanged);
         if (burgerChanged === 'change') {
             console.log('bye');
             burger.classList.remove('change');
+            burgerNav.classList.remove('scale-in-tr');
+            burgerNav.classList.add('scale-out-tr');
         }
         if (burgerChanged === "" || !burgerChanged) {
             console.log('click');
             burger.classList.add('change');
+            burgerNav.style.display = "flex";
+            burgerNav.classList.add('scale-in-tr');
+            burgerNav.classList.remove('scale-out-tr');
+
+
         }
         
     })
