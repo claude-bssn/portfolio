@@ -42,16 +42,6 @@ header {
 main {
   height: 0vh;
 }
-.parallax {
-  height: 140vh;
-  width: 100vw;
-  background-image: url("../public/img/Rectangle.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: sticky;
-  top: 0;
-  z-index: -7;
-}
 .grain {
   content: "";
   display: block;

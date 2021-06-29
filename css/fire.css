@@ -14,10 +14,6 @@
   z-index: -7;
 }
 .ambers {
-  background: url("../public/img/fire/ambersFull.png");
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-position: bottom;
   position: relative;
   z-index: 2;
   top: -24vh;
@@ -25,7 +21,15 @@
   width: 100vw;
   height: 200vh;
   padding-top: 31vh;
-  mask-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 15%, #000000 30%);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.ambers .amberBG {
+  position: absolute;
+  width: 150vw;
+  top: -4px;
+  z-index: -1;
 }
 .fire {
   position: relative;

@@ -140,7 +140,7 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 250px;
+  width: 20vw;
   background-color: rgba(85, 85, 85, 0.434);
   color: #fff;
   text-align: left;

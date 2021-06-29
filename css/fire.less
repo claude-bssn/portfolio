@@ -20,10 +20,7 @@
   z-index: -7;
 }
 .ambers {
-  background: url("../public/img/fire/ambersFull.png");
-  background-repeat: no-repeat;
-  background-size: 200%;
-  background-position: bottom;
+  
   position: relative;
   z-index: 2;
   top: -24vh;
@@ -31,8 +28,16 @@
   width: 100vw;
   height: 200vh;
   padding-top: 31vh;
-  mask-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 1) 30%);
-
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  
+  .amberBG {
+    position: absolute;
+    width: 150vw;
+    top: -4px;
+    z-index: -1;
+  }
 }
 .fire {
   position: relative;
@@ -220,7 +225,7 @@
   color: white;
   text-align: center;
 }
-.cell6{
+.cell6 {
   display: block;
 }
 .carousel__cell:nth-child(6n + 1) {
@@ -259,22 +264,22 @@
 .carousel__cell:nth-child(6) {
   transform: rotateY(300deg) translateZ(30vw);
 }
-.cell1{
+.cell1 {
   display: none;
 }
-.cell2{
+.cell2 {
   display: none;
 }
-.cell3{
+.cell3 {
   display: none;
 }
-.cell4{
+.cell4 {
   display: none;
 }
-.cell5{
+.cell5 {
   display: none;
 }
-.cell6{
+.cell6 {
   display: none;
 }
 
