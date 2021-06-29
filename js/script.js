@@ -3,9 +3,10 @@ window.addEventListener(
   () => {
     const header = document.getElementById("header");
     const rec = header.getBoundingClientRect();
-    const position = (rec.bottom / window.innerHeight) * 100;
+    const position = (rec.top / window.innerHeight) * 100+51;
     document.querySelectorAll(".slice").forEach((div) => {
-      div.style.height = `${position / 2}%`;
+        div.style.height = `${position}%`;
+        console.log(position+50)
       if (position <= 1) {
         div.style.height = "0px";
         document.querySelector(".nameTitle").style.display = "none";

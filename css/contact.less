@@ -1,3 +1,5 @@
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@mobile:      ~"only screen and (max-width: 529px)";
 .contact {
     width: 100vw;
     height: 180vh;
@@ -20,11 +22,15 @@ form{
         border-radius: 10px;
         border: none;
         outline: none;
+        @media @mobile{
+            width: 90vw;
+        }
     }
     input{
         height: 50px;
         background: #fffdfd78;
         width: 100%;
+        
     }
     textarea{
         background: #fffdfd78;

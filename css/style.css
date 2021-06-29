@@ -8,11 +8,14 @@ html {
   scroll-behavior: smooth;
 }
 header {
-  height: 100vh;
+  height: 0vh;
   display: flex;
   flex-direction: column;
   position: sticky;
   z-index: 2;
+}
+main {
+  height: 0vh;
 }
 .slice1 {
   font-size: 5.5rem;
@@ -21,11 +24,19 @@ header {
   position: fixed;
   top: 0px;
 }
+.slice1 p {
+  position: relative;
+  bottom: 1 vh;
+}
 .slice2 {
   font-size: 40px;
   justify-content: flex-end;
   position: fixed;
   bottom: 0px;
+}
+.slice2 p {
+  margin-left: 40vh;
+  margin-right: 10vh;
 }
 .slice {
   color: gray;
@@ -34,13 +45,6 @@ header {
   width: 100vw;
   height: 50vh;
   opacity: 1;
-}
-.slice2 > p {
-  margin-left: 40vh;
-  margin-right: 10vh;
-}
-main {
-  height: 0vh;
 }
 .grain {
   content: "";
