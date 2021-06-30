@@ -494,6 +494,7 @@
   position: absolute;
   right: -20vw;
   top: -30px;
+  z-index: 3;
 }
 @media only screen and (max-width: 529px) and (min-height: 801px) {
   .buttonX {
