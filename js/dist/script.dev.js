@@ -14,7 +14,8 @@ window.addEventListener("scroll", function () {
     } else if (position > 1) {
       document.querySelector(".nameTitle").style.display = "block";
     }
-  }); // ############### parallax earth ###############
+  });
+  console.log(position + 50); // ############### parallax earth ###############
 
   var box = document.querySelector(".parallaxEarth");
   var scrolled = box.getBoundingClientRect();
@@ -92,9 +93,9 @@ window.addEventListener("scroll", function () {
     mountain3.style.paddingRight = Math.abs(air * 0.2) + "px";
     mountain4.style.paddingRight = Math.abs(air) + "px";
     parallaxWord.style.bottom = Math.abs(word) - 155 + "vh";
-  } // console.log(air);
+  }
 
-
+  console.log(air);
   var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6");
   var halfVh = window.innerHeight * 0.5;
   words.forEach(function (wordEl) {

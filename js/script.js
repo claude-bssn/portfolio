@@ -1,6 +1,4 @@
-window.addEventListener(
-  "scroll",
-  () => {
+window.addEventListener("scroll",() => {
     const header = document.getElementById("header");
     const rec = header.getBoundingClientRect();
     const position = (rec.top / window.innerHeight) * 100+51;
@@ -13,8 +11,9 @@ window.addEventListener(
       } else if (position > 1) {
         document.querySelector(".nameTitle").style.display = "block";
       }
-    });
 
+    });
+    console.log(position+50)
     // ############### parallax earth ###############
     let box = document.querySelector(".parallaxEarth");
     let scrolled = box.getBoundingClientRect();
@@ -108,7 +107,7 @@ window.addEventListener(
       mountain4.style.paddingRight = Math.abs(air) + "px";
       parallaxWord.style.bottom = Math.abs(word) - 155 + "vh";
     }
-    // console.log(air);
+    console.log(air);
     let words = document.querySelectorAll(
       "#word1, #word2, #word3, #word4, #word5, #word6"
     );
