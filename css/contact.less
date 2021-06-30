@@ -1,5 +1,6 @@
 @tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
 @mobile:      ~"only screen and (max-width: 529px)";
+
 .contact {
     width: 100vw;
     height: 180vh;
@@ -16,6 +17,9 @@ form{
     flex-direction: column;
     position: absolute;
     bottom: 20vh;
+    @media @mobile{
+        bottom: 10vh;
+    }
     *{
         padding: 10px;
         font-size: 20px;
@@ -23,6 +27,9 @@ form{
         border: none;
         outline: none;
         @media @mobile{
+            width: 90vw;
+        }
+        @media @tablet{
             width: 90vw;
         }
     }
@@ -55,12 +62,19 @@ form{
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
+    @media @mobile{
+        width: 50vw;
+        height: 50px;
+
+    }
   }
 .btn {
     overflow: hidden;
     transition: all 0.3s ease;
     margin: 10px;
     color: goldenrod;
+    
+    
   }
   .btn:hover {
     background: rgba(218, 165, 32, 0.562);

@@ -51,9 +51,9 @@
   .burger .burgerNav {
     width: 95vw;
     height: 20vh;
-    right: 2vw;
+    right: 3vw;
     flex-wrap: wrap;
-    top: 10vw;
+    top: 12vw;
     margin-top: 2vh;
     padding: 3vw;
   }

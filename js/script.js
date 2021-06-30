@@ -275,10 +275,7 @@ function createIconNode(div) {
   let icon = document.createElement("div");
   icon.style.background = `url("./public/img/water/icon/icon${i}.png")`;
   icon.style.position = "absolute";
-  icon.style.top = "27px";
-  icon.style.left = "10px";
-  icon.style.width = "5vw";
-  icon.style.height = "5vw";
+  
   icon.style.backgroundSize = "cover";
   icon.style.backgroundPosition = "center";
   icon.classList.add("icon", `icon${i}`);
@@ -307,7 +304,7 @@ for (i = 0; i < indexDrop; i++) {
     let div = waterline1.lastChild;
     
     rand(60);
-    waterline1.appendChild(createImageNode(11, -2));
+    waterline1.appendChild(createImageNode('', ''));
     if (div == null) {
         div = waterline1.firstChild;
         createIconNode(div);
