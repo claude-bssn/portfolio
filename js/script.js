@@ -1,19 +1,22 @@
 window.addEventListener("scroll",() => {
     const header = document.getElementById("header");
     const rec = header.getBoundingClientRect();
-    const position = (rec.top / window.innerHeight) * 100+51;
+    const position = (rec.top / window.innerHeight) * 100+50;
     document.querySelectorAll(".slice").forEach((div) => {
         div.style.height = `${position}%`;
-        console.log(position+50)
+        console.log(position)
       if (position <= 1) {
-        div.style.height = "0px";
+        // div.style.height = "0px";
         document.querySelector(".nameTitle").style.display = "none";
       } else if (position > 1) {
         document.querySelector(".nameTitle").style.display = "block";
       }
+      if (position <= 1) {
+        div.style.height = "0px";
+      }
 
     });
-    console.log(position+50)
+    // console.log(position+50)
     // ############### parallax earth ###############
     let box = document.querySelector(".parallaxEarth");
     let scrolled = box.getBoundingClientRect();
@@ -49,8 +52,8 @@ window.addEventListener("scroll",() => {
     cloud.style.top = scrollPoss * 0.5 + "px";
 
     let earth = scrolled.top;
-
-    if (earth < -150) {
+  console.log(earth);
+    if (earth < -300) {
       document
         .querySelectorAll("#flower1, #flower2, #flower3, #flower4")
         .forEach((img) => {
@@ -62,7 +65,7 @@ window.addEventListener("scroll",() => {
         .forEach((img) => {
           img.classList.add("bounce-4");
         });
-    } else if (earth > -150) {
+    } else if (earth > -300) {
       document
         .querySelectorAll("#flower1, #flower2, #flower3, #flower4")
         .forEach((img) => {
@@ -107,7 +110,7 @@ window.addEventListener("scroll",() => {
       mountain4.style.paddingRight = Math.abs(air) + "px";
       parallaxWord.style.bottom = Math.abs(word) - 155 + "vh";
     }
-    console.log(air);
+    // console.log(air);
     let words = document.querySelectorAll(
       "#word1, #word2, #word3, #word4, #word5, #word6"
     );
@@ -143,15 +146,15 @@ const burger = document.querySelector("#burger");
 const burgerNav = document.querySelector(".burgerNav");
 burger.addEventListener("click", () => {
   let burgerChanged = burger.className;
-  console.log(burgerChanged);
+  // console.log(burgerChanged);
   if (burgerChanged === "change") {
-    console.log("bye");
+    // console.log("bye");
     burger.classList.remove("change");
     burgerNav.classList.remove("scale-in-tr");
     burgerNav.classList.add("scale-out-tr");
   }
   if (burgerChanged === "" || !burgerChanged) {
-    console.log("click");
+    // console.log("click");
     burger.classList.add("change");
     burgerNav.style.display = "flex";
     burgerNav.classList.add("scale-in-tr");
@@ -178,10 +181,12 @@ let buttonX = document.querySelector(".buttonX");
 let scene = document.querySelector(".scene");
 let sceneBG = document.querySelector(".flame");
 let ambers = document.querySelector(".ambers");
+let amberBG = document.querySelector(".amberBG");
 
 fire.addEventListener("click", () => {
   if ((fire.style.display = "flex")) {
     fire.style.display = "none";
+    amberBG.style.display = "none";
     scene.style.display = "flex";
     sceneBG.style.position = "sticky";
     ambers.style.background =
@@ -193,6 +198,8 @@ fire.addEventListener("click", () => {
 buttonX.addEventListener("click", () => {
   if ((scene.style.display = "flex")) {
     fire.style.display = "flex";
+    amberBG.style.display = "flex";
+
     sceneBG.style.position = "sticky";
     ambers.style.background = "url(../public/img/fire/ambersFull.png)";
     ambers.style.maskImage =
@@ -224,7 +231,7 @@ prevButton.addEventListener("click", function () {
 
     cell = 6;
   }
-  console.log(cell);
+  // console.log(cell);
   document.querySelector(`.cell${cell}`).style.display = "block";
   document.querySelector(`.cell${cell + 1}`).style.display = "none";
   document.querySelector(`.cell${cell - 1}`).style.display = "none";

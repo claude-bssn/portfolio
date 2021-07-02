@@ -1,11 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Spartan", sans-serif;
 }
 html {
   scrollbar-width: none;
   width: 100vw;
   scroll-behavior: smooth;
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
 }
 header {
   height: 50vh;
@@ -17,7 +22,16 @@ header {
 main {
   height: 0vh;
 }
+.slice {
+  color: gray;
+  background-color: #1c1c24;
+  display: grid;
+  width: 100vw;
+  height: 50vh;
+  opacity: 1;
+}
 .slice1 {
+  display: flex;
   font-size: 5.5rem;
   justify-content: center;
   align-items: flex-end;
@@ -30,21 +44,29 @@ main {
 }
 .slice2 {
   font-size: 40px;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   bottom: 0px;
 }
 .slice2 p {
-  margin-left: 40vh;
-  margin-right: 10vh;
+  position: relative;
+  margin-top: 3vh;
+  margin-left: 20px;
 }
-.slice {
-  color: gray;
-  background-color: #1c1c24;
-  display: grid;
-  width: 100vw;
-  height: 50vh;
-  opacity: 1;
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .slice2 p {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 529px) {
+  .slice2 p {
+    margin-left: 0;
+  }
+}
+.slice2 .material-icons {
+  align-self: center;
+  justify-content: center;
+  display: flex;
 }
 .grain {
   content: "";
@@ -55,4 +77,27 @@ main {
   position: sticky;
   top: 0;
   bottom: 0vh;
+}
+.title,
+.title2 {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  font-size: 5vw;
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .title,
+  .title2 {
+    font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 529px) {
+  .title,
+  .title2 {
+    font-size: 7vw;
+  }
 }

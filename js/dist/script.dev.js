@@ -3,19 +3,23 @@
 window.addEventListener("scroll", function () {
   var header = document.getElementById("header");
   var rec = header.getBoundingClientRect();
-  var position = rec.top / window.innerHeight * 100 + 51;
+  var position = rec.top / window.innerHeight * 100 + 50;
   document.querySelectorAll(".slice").forEach(function (div) {
     div.style.height = "".concat(position, "%");
-    console.log(position + 50);
+    console.log(position);
 
     if (position <= 1) {
-      div.style.height = "0px";
+      // div.style.height = "0px";
       document.querySelector(".nameTitle").style.display = "none";
     } else if (position > 1) {
       document.querySelector(".nameTitle").style.display = "block";
     }
-  });
-  console.log(position + 50); // ############### parallax earth ###############
+
+    if (position <= 1) {
+      div.style.height = "0px";
+    }
+  }); // console.log(position+50)
+  // ############### parallax earth ###############
 
   var box = document.querySelector(".parallaxEarth");
   var scrolled = box.getBoundingClientRect();
@@ -47,8 +51,9 @@ window.addEventListener("scroll", function () {
   var cloud = document.querySelector(".clouds");
   cloud.style.top = scrollPoss * 0.5 + "px";
   var earth = scrolled.top;
+  console.log(earth);
 
-  if (earth < -150) {
+  if (earth < -300) {
     document.querySelectorAll("#flower1, #flower2, #flower3, #flower4").forEach(function (img) {
       img.classList.remove("bounce-4");
     });
@@ -56,7 +61,7 @@ window.addEventListener("scroll", function () {
     document.querySelectorAll("#flower1, #flower2, #flower3, #flower4").forEach(function (img) {
       img.classList.add("bounce-4");
     });
-  } else if (earth > -150) {
+  } else if (earth > -300) {
     document.querySelectorAll("#flower1, #flower2, #flower3, #flower4").forEach(function (img) {
       img.classList.remove("bounce-4");
     });
@@ -93,9 +98,9 @@ window.addEventListener("scroll", function () {
     mountain3.style.paddingRight = Math.abs(air * 0.2) + "px";
     mountain4.style.paddingRight = Math.abs(air) + "px";
     parallaxWord.style.bottom = Math.abs(word) - 155 + "vh";
-  }
+  } // console.log(air);
 
-  console.log(air);
+
   var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6");
   var halfVh = window.innerHeight * 0.5;
   words.forEach(function (wordEl) {
@@ -125,18 +130,17 @@ window.addEventListener("scroll", function () {
 var burger = document.querySelector("#burger");
 var burgerNav = document.querySelector(".burgerNav");
 burger.addEventListener("click", function () {
-  var burgerChanged = burger.className;
-  console.log(burgerChanged);
+  var burgerChanged = burger.className; // console.log(burgerChanged);
 
   if (burgerChanged === "change") {
-    console.log("bye");
+    // console.log("bye");
     burger.classList.remove("change");
     burgerNav.classList.remove("scale-in-tr");
     burgerNav.classList.add("scale-out-tr");
   }
 
   if (burgerChanged === "" || !burgerChanged) {
-    console.log("click");
+    // console.log("click");
     burger.classList.add("change");
     burgerNav.style.display = "flex";
     burgerNav.classList.add("scale-in-tr");
@@ -157,9 +161,11 @@ var buttonX = document.querySelector(".buttonX");
 var scene = document.querySelector(".scene");
 var sceneBG = document.querySelector(".flame");
 var ambers = document.querySelector(".ambers");
+var amberBG = document.querySelector(".amberBG");
 fire.addEventListener("click", function () {
   if (fire.style.display = "flex") {
     fire.style.display = "none";
+    amberBG.style.display = "none";
     scene.style.display = "flex";
     sceneBG.style.position = "sticky";
     ambers.style.background = "linear-gradient(180deg, rgba(254,252,253,0) 5%, rgba(28,28,28,0.45) 15%, rgba(0,0,0,0.7) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.45) 70%, rgba(254,252,253,0) 100%)";
@@ -169,6 +175,7 @@ fire.addEventListener("click", function () {
 buttonX.addEventListener("click", function () {
   if (scene.style.display = "flex") {
     fire.style.display = "flex";
+    amberBG.style.display = "flex";
     sceneBG.style.position = "sticky";
     ambers.style.background = "url(../public/img/fire/ambersFull.png)";
     ambers.style.maskImage = "linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 15%, #000000 30%)";
@@ -197,9 +204,9 @@ prevButton.addEventListener("click", function () {
   } else if (cell == 1) {
     document.querySelector(".cell".concat(cell)).style.display = "none";
     cell = 6;
-  }
+  } // console.log(cell);
 
-  console.log(cell);
+
   document.querySelector(".cell".concat(cell)).style.display = "block";
   document.querySelector(".cell".concat(cell + 1)).style.display = "none";
   document.querySelector(".cell".concat(cell - 1)).style.display = "none";

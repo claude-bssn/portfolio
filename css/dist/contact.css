@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
 }
+.contact .title {
+  margin-top: 30vh;
+}
 form {
   display: flex;
   justify-content: center;

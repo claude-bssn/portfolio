@@ -12,6 +12,10 @@
   right: 2vw;
   top: 3vw;
   z-index: 1;
+  position: fixed;
+}
+.burger :hover .bar {
+  box-shadow: 0px 0px 5px #ffffff, 0px 0px 10px rgba(255, 255, 255), 0px 0px 20px #02a5ca3f, 0px 0px 25px #02a5ca62, 0px 0px 30px #02a5ca6b, 0px 0px 5px #ffffff inset, 0px 0px 10px rgba(255, 255, 255) inset, 0px 0px 20px #02a5caad inset, 0px 0px 25px #02a5cab1 inset, 0px 0px 30px #02a5ca9a inset;
 }
 @media only screen and (max-width: 529px) {
   .burger {
@@ -20,7 +24,6 @@
 }
 .burger .bar {
   width: 35px;
-  box-shadow: 0px 0px 5px #ffffff, 0px 0px 10px rgba(255, 255, 255), 0px 0px 20px #228dff3f, 0px 0px 25px #228dff62, 0px 0px 30px #228dff6b, 0px 0px 5px #ffffff inset, 0px 0px 10px rgba(255, 255, 255) inset, 0px 0px 20px #228dffad inset, 0px 0px 25px #228dffb1 inset, 0px 0px 30px #228dff9a inset;
   margin: 6px 0;
   border: 2px solid whitesmoke;
   transition: 0.4s;
@@ -30,13 +33,16 @@
   height: 60vh;
   width: 20vw;
   border: 2px solid #fff;
-  box-shadow: 0px 0px 5px #ffffff, 0px 0px 10px rgba(255, 255, 255), 0px 0px 20px #228dff3f, 0px 0px 25px #228dff62, 0px 0px 30px #228dff6b, 0px 0px 5px #ffffff inset, 0px 0px 10px rgba(255, 255, 255) inset, 0px 0px 20px #228dffad inset, 0px 0px 25px #228dffb1 inset, 0px 0px 30px #228dff9a inset;
+  box-shadow: 0px 0px 5px #ffffff, 0px 0px 10px rgba(255, 255, 255), 0px 0px 20px #02a5ca3f, 0px 0px 25px #02a5ca62, 0px 0px 30px #02a5ca6b, 0px 0px 5px #ffffff inset, 0px 0px 10px rgba(255, 255, 255) inset, 0px 0px 20px #02a5caad inset, 0px 0px 25px #02a5cab1 inset, 0px 0px 30px #02a5ca9a inset;
   position: fixed;
   top: 6vw;
   right: 2vw;
   display: none;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: #02a5ca62;
+  padding-left: 1vw;
 }
 @media only screen and (min-width: 530px) and (max-width: 949px) {
   .burger .burgerNav {
@@ -45,6 +51,7 @@
     flex-wrap: wrap;
     padding: 20px;
     margin-top: 2vh;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 529px) {
@@ -56,18 +63,24 @@
     top: 12vw;
     margin-top: 2vh;
     padding: 3vw;
+    justify-content: center;
   }
 }
 .burger a {
-  text-decoration: 5one;
+  text-decoration: none;
   color: white;
   margin: 2vh;
   font-size: 3vh;
+  transition: 0.1s;
+}
+.burger a:hover {
+  text-shadow: 0 0 5px #ffffff;
 }
 @media only screen and (max-width: 529px) {
   .burger a {
     margin: 1vh;
     padding-top: 1vh;
+    font-size: 2vh;
   }
 }
 .change .bar1 {

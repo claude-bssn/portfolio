@@ -1,14 +1,21 @@
 .water {
   width: 100vw;
-  height: 350vh;
+  height: 250vh;
   background: #a50e07;
   background: linear-gradient(180deg, #a50e07 13%, #00a6bb 49%, #6cbbcb 77%, #a1d1dc 85%, #f4b7a8 100%);
   z-index: -1;
   position: relative;
 }
+.water .title {
+  margin-top: 50vh;
+}
+.water .title2 {
+  top: 210vh;
+  z-index: -1;
+}
 .parallaxWater {
   position: relative;
-  top: 150vh;
+  top: 60vh;
   display: flex;
   justify-content: center;
   flex-direction: column;

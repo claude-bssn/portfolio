@@ -3,13 +3,15 @@
 
 .earth {
   position: relative;
-  height: 250vh;
+  height: 200vh;
   width: 100vw;
   display: flex;
   overflow: hidden;
   z-index: -2;
   background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
-    
+  .title{
+    margin-top: 40vh;
+  }
   }
   .parallaxEarth {
     height: 250vh;
@@ -19,19 +21,50 @@
     // background: #21d4fd;
     // background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
     position: relative;
-    margin-top: 100vh;
+    margin-top: 70vh;
     .flower{
       position: absolute;
       width: 10vw;
       z-index: 3;
+      margin-top: -2vh;
+
       @media @mobile {
         width: 25vw;
         z-index: 3;
+        margin-top: 1vh;
       }
       @media @tablet {
         width: 20vw;
         z-index: 3;
+        margin-top: 1vh;
       }
+    }
+    #flower2{
+      width: 7vw;
+      margin-top: 1vh;
+
+      @media @mobile {
+        width: 20vw;
+        z-index: 3;
+        margin-top: 1vh;
+
+      }
+      @media @tablet {
+        width: 15vw;
+        z-index: 3;
+        margin-top: 2vh;
+
+      }
+
+    }
+    .island7{
+      z-index: -2;
+    }
+    .island6{
+      z-index: -4;
+    }
+    .island10{
+      z-index: -5;
     }
   }
   
@@ -53,13 +86,13 @@
   .island12 {
     width: 44vw;
     filter: blur(2px);
-    left: -335px;
+    left: -50vh;
   }
   .island13 {
     width: 56vw;
     filter: blur(2px);
-    right: -425px;
-    margin-top: 32vh;
+    right: -60vh;
+        margin-top: 20vh;
   }
   .island1 {
     width: 35vw;
@@ -162,7 +195,6 @@
     color: #fff;
     text-align: left;
     padding: 5px 5px;
-    border-radius: 6px;
     /* Position the tooltip text */
     position: absolute;
     z-index: 5;
@@ -172,8 +204,9 @@
     @media @mobile {
       width: 48vw;
       height: 32vh;
-    // position: relative;
-
+    }@media @tablet {
+      width: 48vw;
+      height: 32vh;
     }
   }
   .tooltip .tooltiptext a {
@@ -252,4 +285,35 @@
       30%  { transform: scale(2,1.1) translateY(0px); }
       50%  { transform: scale(1,1)    translateY(0); }
       100% { transform: scale(1,1)    translateY(0); }
+  }
+  @keyframes myAnim {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 100%;
+    }
+  
+    10% {
+      transform: rotate(2deg);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: rotate(-4deg);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: rotate(4deg);
+    }
+  
+    80% {
+      transform: rotate(-2deg);
+    }
+  
+    90% {
+      transform: rotate(2deg);
+    }
   }

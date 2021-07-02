@@ -1,11 +1,14 @@
 .earth {
   position: relative;
-  height: 250vh;
+  height: 200vh;
   width: 100vw;
   display: flex;
   overflow: hidden;
   z-index: -2;
   background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
+}
+.earth .title {
+  margin-top: 40vh;
 }
 .parallaxEarth {
   height: 250vh;
@@ -13,24 +16,54 @@
   top: 0vh;
   z-index: -7;
   position: relative;
-  margin-top: 100vh;
+  margin-top: 70vh;
 }
 .parallaxEarth .flower {
   position: absolute;
   width: 10vw;
   z-index: 3;
+  margin-top: -2vh;
 }
 @media only screen and (max-width: 529px) {
   .parallaxEarth .flower {
     width: 25vw;
     z-index: 3;
+    margin-top: 1vh;
   }
 }
 @media only screen and (min-width: 530px) and (max-width: 949px) {
   .parallaxEarth .flower {
     width: 20vw;
     z-index: 3;
+    margin-top: 1vh;
   }
+}
+.parallaxEarth #flower2 {
+  width: 7vw;
+  margin-top: 1vh;
+}
+@media only screen and (max-width: 529px) {
+  .parallaxEarth #flower2 {
+    width: 20vw;
+    z-index: 3;
+    margin-top: 1vh;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .parallaxEarth #flower2 {
+    width: 15vw;
+    z-index: 3;
+    margin-top: 2vh;
+  }
+}
+.parallaxEarth .island7 {
+  z-index: -2;
+}
+.parallaxEarth .island6 {
+  z-index: -4;
+}
+.parallaxEarth .island10 {
+  z-index: -5;
 }
 .island {
   position: absolute;
@@ -53,13 +86,13 @@
 .island12 {
   width: 44vw;
   filter: blur(2px);
-  left: -335px;
+  left: -50vh;
 }
 .island13 {
   width: 56vw;
   filter: blur(2px);
-  right: -425px;
-  margin-top: 32vh;
+  right: -60vh;
+  margin-top: 20vh;
 }
 .island1 {
   width: 35vw;
@@ -159,7 +192,6 @@
   color: #fff;
   text-align: left;
   padding: 5px 5px;
-  border-radius: 6px;
   /* Position the tooltip text */
   position: absolute;
   z-index: 5;
@@ -168,6 +200,12 @@
   transition: opacity 1s;
 }
 @media only screen and (max-width: 529px) {
+  .tooltip .tooltiptext {
+    width: 48vw;
+    height: 32vh;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
   .tooltip .tooltiptext {
     width: 48vw;
     height: 32vh;
@@ -257,5 +295,31 @@
   }
   100% {
     transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
   }
 }
