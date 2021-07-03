@@ -5,10 +5,47 @@
   display: flex;
   overflow: hidden;
   z-index: -2;
-  background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
+  background: linear-gradient(180deg, #21d4fd 0%, #0089d0 50%, #d8e7f8 93%);
 }
 .earth .title {
   margin-top: 40vh;
+}
+.clouds {
+  position: relative;
+  z-index: -6;
+  margin-top: 10vh;
+}
+.cloud {
+  position: absolute;
+}
+.cloud1 {
+  width: 50vw;
+  left: 5%;
+}
+.cloud2 {
+  width: 41vw;
+  left: 37%;
+  margin-top: 24vh;
+}
+.cloud3 {
+  width: 27vw;
+  left: 3%;
+  margin-top: 53vh;
+}
+.cloud4 {
+  width: 30vw;
+  left: 59%;
+  margin-top: 60vh;
+}
+.cloud5 {
+  width: 47vw;
+  left: 8%;
+  margin-top: 70vh;
+}
+.cloud6 {
+  width: 40vh;
+  left: 65%;
+  margin-top: 10vh;
 }
 .parallaxEarth {
   height: 250vh;
@@ -164,18 +201,6 @@
   margin-top: 93vh;
   z-index: -6;
 }
-.tooltipPos1 {
-  margin-top: 91vh;
-}
-.tooltipPos2 {
-  margin-top: 86vh;
-}
-.tooltipPos3 {
-  margin-top: 87vh;
-}
-.tooltipPos4 {
-  margin-top: 83vh;
-}
 .tooltip {
   position: absolute;
   display: inline-block;
@@ -186,8 +211,6 @@
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 18vw;
-  height: 25vh;
   background-color: rgba(85, 85, 85, 0.434);
   color: #fff;
   text-align: left;
@@ -199,20 +222,38 @@
   opacity: 0;
   transition: opacity 1s;
 }
-@media only screen and (max-width: 529px) {
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
   .tooltip .tooltiptext {
     width: 48vw;
     height: 32vh;
   }
 }
-@media only screen and (min-width: 530px) and (max-width: 949px) {
-  .tooltip .tooltiptext {
-    width: 48vw;
-    height: 32vh;
-  }
+.tooltip .tooltiptext * {
+  margin-top: 2%;
+  margin-left: 1%;
 }
 .tooltip .tooltiptext a {
   color: white;
+  margin-top: 2vh;
+  font-size: 10px;
+}
+.tooltip .tooltiptext .column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.tooltip .tooltiptext .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tooltip .tooltiptext .row img {
+  width: 50px;
+}
+.tooltip .tooltiptext .row div {
+  width: 100%;
+}
+.tooltip .tooltiptext .row h2 {
+  font-size: 1.2em;
 }
 /* Tooltip arrow */
 .tooltip .tooltiptext::after {
@@ -230,42 +271,38 @@
   visibility: visible;
   opacity: 1;
 }
-.clouds {
-  position: relative;
-  z-index: -6;
-  margin-top: 10vh;
+.tooltipPos1 {
+  margin-top: 91vh;
 }
-.cloud {
-  position: absolute;
-}
-.cloud1 {
-  width: 50vw;
-  left: 5%;
-}
-.cloud2 {
-  width: 41vw;
-  left: 37%;
-  margin-top: 24vh;
-}
-.cloud3 {
-  width: 27vw;
-  left: 3%;
-  margin-top: 53vh;
-}
-.cloud4 {
+.tooltipPos1 .tooltiptext {
   width: 30vw;
-  left: 59%;
-  margin-top: 60vh;
+  top: -450px;
 }
-.cloud5 {
-  width: 47vw;
-  left: 8%;
-  margin-top: 70vh;
+.tooltipPos2 {
+  margin-top: 86vh;
 }
-.cloud6 {
-  width: 40vh;
-  left: 65%;
-  margin-top: 10vh;
+.tooltipPos2 .tooltiptext {
+  width: 30vw;
+  top: -350px;
+}
+.tooltipPos3 {
+  margin-top: 87vh;
+}
+.tooltipPos3 .tooltiptext {
+  width: 30vw;
+  top: -450px;
+}
+.tooltipPos4 {
+  margin-top: 83vh;
+}
+.tooltipPos4 .tooltiptext {
+  width: 30vw;
+  padding-left: 15px;
+  top: -400px;
+}
+.tooltipPos4 .tooltiptext ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 #earth {
   padding-top: 135vh;

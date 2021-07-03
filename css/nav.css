@@ -17,6 +17,7 @@
   height: 100vh;
   z-index: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 50%, #21D4FD 80%);
+  overflow: hidden;
 }
 .nav {
   height: 45vw;
@@ -59,13 +60,37 @@
   visibility: hidden;
 }
 .nav .text {
-  margin-top: 13vh;
+  margin-top: 10%;
+  margin-left: 5%;
   padding: 5vw;
   font-size: 1.5vw;
   color: whitesmoke;
 }
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .nav .text h2 {
+    top: -13vh;
+    position: absolute;
+    font-size: 8vw;
+  }
+}
 .nav .text p {
   margin-top: 30px;
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .nav .text p {
+    width: 90vw;
+    margin-top: 11px;
+    position: relative;
+    bottom: -35vh;
+    font-size: 3vw;
+    right: 20vw;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .nav .text p {
+    font-size: 2vw;
+    bottom: -45vh;
+  }
 }
 .circle {
   height: inherit;
@@ -137,19 +162,30 @@
   position: absolute;
   left: 47%;
 }
+@media only screen and (max-width: 529px) {
+  .img1 {
+    left: 42%;
+  }
+}
 .img2 {
   position: absolute;
   left: 7%;
   top: 19%;
 }
-@media only screen and (max-width: 529px) {
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
   .img2 {
-    left: 2%;
+    left: 0%;
     top: 22%;
   }
 }
 .img2 span {
   right: 150%;
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .img2 span {
+    left: 150%;
+    top: 150%;
+  }
 }
 .img2:hover * {
   visibility: visible;
@@ -160,13 +196,19 @@
   right: 7%;
   top: 19%;
 }
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .img3 {
+    right: 0%;
+    top: 22%;
+  }
+}
 .img3 span {
   left: 120%;
 }
-@media only screen and (max-width: 529px) {
-  .img3 {
-    right: 2%;
-    top: 22%;
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .img3 span {
+    left: -375%;
+    top: 150%;
   }
 }
 .img3:hover * {
@@ -178,7 +220,7 @@
   right: 7%;
   top: 75%;
 }
-@media only screen and (max-width: 529px) {
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
   .img4 {
     right: 10%;
     top: 80%;
@@ -186,6 +228,12 @@
 }
 .img4 span {
   left: 150%;
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .img4 span {
+    left: -300%;
+    bottom: 250%;
+  }
 }
 .img4:hover * {
   visibility: visible;
@@ -199,7 +247,13 @@
 .img5 span {
   right: 150%;
 }
-@media only screen and (max-width: 529px) {
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .img5 span {
+    left: 150%;
+    bottom: 250%;
+  }
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
   .img5 {
     left: 10%;
     top: 80%;

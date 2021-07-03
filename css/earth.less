@@ -1,5 +1,5 @@
-@mobile:      ~"only screen and (max-width: 529px)";
-@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@mobile: ~"only screen and (max-width: 529px)";
+@tablet: ~"only screen and (min-width: 530px) and (max-width: 949px)";
 
 .earth {
   position: relative;
@@ -8,312 +8,358 @@
   display: flex;
   overflow: hidden;
   z-index: -2;
-  background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
-  .title{
+  background: linear-gradient(180deg, #21d4fd 0%, #0089d0 50%, #d8e7f8 93%);
+  .title {
     margin-top: 40vh;
   }
-  }
-  .parallaxEarth {
-    height: 250vh;
-    width: 100vw;
-    top: 0vh;
-    z-index: -7;
-    // background: #21d4fd;
-    // background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
-    position: relative;
-    margin-top: 70vh;
-    .flower{
-      position: absolute;
-      width: 10vw;
-      z-index: 3;
-      margin-top: -2vh;
-
-      @media @mobile {
-        width: 25vw;
-        z-index: 3;
-        margin-top: 1vh;
-      }
-      @media @tablet {
-        width: 20vw;
-        z-index: 3;
-        margin-top: 1vh;
-      }
-    }
-    #flower2{
-      width: 7vw;
-      margin-top: 1vh;
-
-      @media @mobile {
-        width: 20vw;
-        z-index: 3;
-        margin-top: 1vh;
-
-      }
-      @media @tablet {
-        width: 15vw;
-        z-index: 3;
-        margin-top: 2vh;
-
-      }
-
-    }
-    .island7{
-      z-index: -2;
-    }
-    .island6{
-      z-index: -4;
-    }
-    .island10{
-      z-index: -5;
-    }
-  }
-  
-  .island {
+}
+.clouds {
+  position: relative;
+  z-index: -6;
+  margin-top: 10vh;
+}
+.cloud {
+  position: absolute;
+}
+.cloud1 {
+  width: 50vw;
+  left: 5%;
+}
+.cloud2 {
+  width: 41vw;
+  left: 37%;
+  margin-top: 24vh;
+}
+.cloud3 {
+  width: 27vw;
+  left: 3%;
+  margin-top: 53vh;
+}
+.cloud4 {
+  width: 30vw;
+  left: 59%;
+  margin-top: 60vh;
+}
+.cloud5 {
+  width: 47vw;
+  left: 8%;
+  margin-top: 70vh;
+}
+.cloud6 {
+  width: 40vh;
+  left: 65%;
+  margin-top: 10vh;
+}
+.parallaxEarth {
+  height: 250vh;
+  width: 100vw;
+  top: 0vh;
+  z-index: -7;
+  // background: #21d4fd;
+  // background: linear-gradient(180deg, #21D4FD 0%, #0089d0 50%, #d8e7f8 93%);
+  position: relative;
+  margin-top: 70vh;
+  .flower {
     position: absolute;
-    max-height: 100%;
-    width: inherit;
-    height: inherit;
-    margin-top: 6vh;
+    width: 10vw;
+    z-index: 3;
+    margin-top: -2vh;
+
     @media @mobile {
-      margin-top: 8vh;
+      width: 25vw;
+      z-index: 3;
+      margin-top: 1vh;
     }
     @media @tablet {
-      margin-top: 4vh;
-      margin-top: 8vh;
+      width: 20vw;
+      z-index: 3;
+      margin-top: 1vh;
     }
-    
   }
-  .island12 {
-    width: 44vw;
-    filter: blur(2px);
-    left: -50vh;
-  }
-  .island13 {
-    width: 56vw;
-    filter: blur(2px);
-    right: -60vh;
-        margin-top: 20vh;
-  }
-  .island1 {
-    width: 35vw;
-    right: -3%;
-    margin-top: 86vh;
-    z-index: -1;
-  }
-  .island2 {
-    width: 35vw;
-    margin-top: 100vh;
-    z-index: -1;
-  }
-  .island3 {
-    width: 20vw;
-    height: 20vw;
-    right: 30%;
-    margin-top: 98vh;
-    z-index: -1;
-  }
-  .island4 {
-    width: 17vw;
-    right: 23%;
-    margin-top: 95vh;
-    z-index: -2;
-    
-  }
-  .island5 {
-    width: 13vw;
-    right: 16%;
-    margin-top: 90vh;
-    z-index: -3;
-  }
-  .island6 {
-    width: 8vw;
-    height: 8vw;
-    right: 25%;
-    margin-top: 92vh;
-    z-index: -4;
+  #flower2 {
+    width: 7vw;
+    margin-top: 1vh;
+
+    @media @mobile {
+      width: 20vw;
+      z-index: 3;
+      margin-top: 1vh;
+    }
+    @media @tablet {
+      width: 15vw;
+      z-index: 3;
+      margin-top: 2vh;
+    }
   }
   .island7 {
-    width: 17vw;
-    height: 17vw;
-    left: 18%;
-    margin-top: 6vh;
     z-index: -2;
-    
   }
-  .island8 {
-    width: 17vw;
-    height: 17vw;
-    left: 11%;
-    margin-top: 94vh;
-    z-index: -3;
-  }
-  .island9 {
-    width: 14vw;
-    left: 26%;
-    margin-top: 93vh;
+  .island6 {
     z-index: -4;
   }
   .island10 {
-    width: 13vw;
-    height: 13vw;
-    left: 33%;
-    margin-top: 89vh;
     z-index: -5;
   }
-  .island11 {
-    width: 8vw;
-    left: 41%;
-    margin-top: 93vh;
-    z-index: -6;
-  }
-  
-  .tooltipPos1 {
-    margin-top: 91vh;
-  }
-  .tooltipPos2 {
-    margin-top: 86vh;
-  }
-  .tooltipPos3 {
-    margin-top: 87vh;
-  }
-  .tooltipPos4 {
-    margin-top: 83vh;
-  }
-  .tooltip {
-    position: absolute;
-    display: inline-block;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-  }
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 18vw;
-    height: 25vh;
-    background-color: rgba(85, 85, 85, 0.434);
-    color: #fff;
-    text-align: left;
-    padding: 5px 5px;
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 5;
-    top: -30vh;    
-    opacity: 0;
-    transition: opacity 1s;
-    @media @mobile {
-      width: 48vw;
-      height: 32vh;
-    }@media @tablet {
-      width: 48vw;
-      height: 32vh;
-    }
-  }
-  .tooltip .tooltiptext a {
-    color: white;
-  }
-  /* Tooltip arrow */
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-  .clouds {
-    position: relative;
-    z-index: -6;
-    margin-top: 10vh;
-  }
-  .cloud {
-    position: absolute;
-  }
-  .cloud1 {
-    width: 50vw;
-    left: 5%;
-  }
-  .cloud2 {
-    width: 41vw;
-    left: 37%;
-    margin-top: 24vh;
-  }
-  .cloud3 {
-    width: 27vw;
-    left: 3%;
-    margin-top: 53vh;
-  }
-  .cloud4 {
-    width: 30vw;
-    left: 59%;
-    margin-top: 60vh;
-  }
-  .cloud5 {
-    width: 47vw;
-    left: 8%;
-    margin-top: 70vh;
-  }
-  .cloud6 {
-    width: 40vh;
-    left: 65%;
-    margin-top: 10vh;
-  }
-#earth{
-  padding-top: 135vh;
-    margin-top: -135vh;
-    z-index: -15;
-    position: relative;
-} 
-    .bounce-4 {
-      animation-name: bounce-4;
-      animation-timing-function: ease;
-      animation-duration: 2s;
-      animation-iteration-count: 2;
-      transform-origin: bottom;
+}
 
+.island {
+  position: absolute;
+  max-height: 100%;
+  width: inherit;
+  height: inherit;
+  margin-top: 6vh;
+  @media @mobile {
+    margin-top: 8vh;
   }
-  @keyframes bounce-4 {
-      0%   { transform: scale(1,1)    translateY(0); }
-      10%  { transform: scale(1.1,2) translateY(0); }
-      30%  { transform: scale(2,1.1) translateY(0px); }
-      50%  { transform: scale(1,1)    translateY(0); }
-      100% { transform: scale(1,1)    translateY(0); }
+  @media @tablet {
+    margin-top: 4vh;
+    margin-top: 8vh;
   }
-  @keyframes myAnim {
-    0%,
-    100% {
-      transform: rotate(0deg);
-      transform-origin: 50% 100%;
+}
+.island12 {
+  width: 44vw;
+  filter: blur(2px);
+  left: -50vh;
+}
+.island13 {
+  width: 56vw;
+  filter: blur(2px);
+  right: -60vh;
+  margin-top: 20vh;
+}
+.island1 {
+  width: 35vw;
+  right: -3%;
+  margin-top: 86vh;
+  z-index: -1;
+}
+.island2 {
+  width: 35vw;
+  margin-top: 100vh;
+  z-index: -1;
+}
+.island3 {
+  width: 20vw;
+  height: 20vw;
+  right: 30%;
+  margin-top: 98vh;
+  z-index: -1;
+}
+.island4 {
+  width: 17vw;
+  right: 23%;
+  margin-top: 95vh;
+  z-index: -2;
+}
+.island5 {
+  width: 13vw;
+  right: 16%;
+  margin-top: 90vh;
+  z-index: -3;
+}
+.island6 {
+  width: 8vw;
+  height: 8vw;
+  right: 25%;
+  margin-top: 92vh;
+  z-index: -4;
+}
+.island7 {
+  width: 17vw;
+  height: 17vw;
+  left: 18%;
+  margin-top: 6vh;
+  z-index: -2;
+}
+.island8 {
+  width: 17vw;
+  height: 17vw;
+  left: 11%;
+  margin-top: 94vh;
+  z-index: -3;
+}
+.island9 {
+  width: 14vw;
+  left: 26%;
+  margin-top: 93vh;
+  z-index: -4;
+}
+.island10 {
+  width: 13vw;
+  height: 13vw;
+  left: 33%;
+  margin-top: 89vh;
+  z-index: -5;
+}
+.island11 {
+  width: 8vw;
+  left: 41%;
+  margin-top: 93vh;
+  z-index: -6;
+}
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgba(85, 85, 85, 0.434);
+  color: #fff;
+  text-align: left;
+  padding: 5px 5px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 5;
+  top: -30vh;
+  opacity: 0;
+  transition: opacity 1s;
+
+  @media @mobile, @tablet {
+    width: 48vw;
+    height: 32vh;
+  }
+  * {
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+  a {
+    color: white;
+    margin-top: 2vh;
+    font-size: 10px;
+  }
+  .column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+      width: 50px;
     }
-  
-    10% {
-      transform: rotate(2deg);
+    div{
+      width: 100%;
     }
-  
-    20%,
-    40%,
-    60% {
-      transform: rotate(-4deg);
-    }
-  
-    30%,
-    50%,
-    70% {
-      transform: rotate(4deg);
-    }
-  
-    80% {
-      transform: rotate(-2deg);
-    }
-  
-    90% {
-      transform: rotate(2deg);
+    h2{
+      font-size: 1.2em;
     }
   }
+}
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltipPos1 {
+  margin-top: 91vh;
+  .tooltiptext {
+    
+    width: 30vw;
+    top: -450px;
+  }
+}
+.tooltipPos2 {
+  margin-top: 86vh;
+  .tooltiptext {
+    width: 30vw;    
+    top: -350px;
+  }
+}
+.tooltipPos3 {
+  margin-top: 87vh;
+  .tooltiptext {
+    width: 30vw;    
+    top: -450px;
+    
+  }
+}
+.tooltipPos4 {
+  margin-top: 83vh;
+  .tooltiptext {
+    width: 30vw;
+    padding-left: 15px;;
+    top: -400px;
+    ul{
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+#earth {
+  padding-top: 135vh;
+  margin-top: -135vh;
+  z-index: -15;
+  position: relative;
+}
+.bounce-4 {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  transform-origin: bottom;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 2) translateY(0);
+  }
+  30% {
+    transform: scale(2, 1.1) translateY(0px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}

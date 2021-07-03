@@ -20,7 +20,8 @@
     height: 100vh;
     z-index: 0;
     background: linear-gradient(180deg, rgba(255,255,255,0.2)50%, #21D4FD 80%);
-    
+    overflow: hidden;
+
 }
 
 
@@ -61,15 +62,40 @@
      visibility: hidden;
     }
     .text{
-        margin-top: 13vh;
+        margin-top: 10%;
+        margin-left: 5%;
     padding: 5vw;
     font-size: 1.5vw;
     color: whitesmoke;
-        p{
+        h2 {
+            @media @mobile , @tablet {
+                top: -13vh;
+                position: absolute;
+                font-size: 8vw;                
+            }
+        }
+        p {
             margin-top: 30px;
+            @media @mobile , @tablet {
+                width: 90vw;
+                margin-top: 11px;
+                position: relative;
+                bottom: -35vh;
+                font-size: 3vw;
+                right: 20vw;
+
+            }
+            @media @tablet {
+                font-size: 2vw;
+                bottom: -45vh;
+
+                
+            }
+                
+            }
         }
     }
-}
+
 
 .circle {
     height: inherit;
@@ -162,17 +188,25 @@
     /* transform: translate(50%); */
     position: absolute;
     left: 47%;
+    @media @mobile {
+        left: 42%;
+        
+    }
 }
 .img2{
     position: absolute;
     left: 7%;
     top: 19%;
-    @media @mobile{
-        left: 2%;
+    @media @mobile , @tablet{
+        left: 0%;
         top: 22%;
     }
     span{
         right: 150%;
+        @media @mobile , @tablet {
+            left: 150%;
+            top: 150%;
+        }
     }
 }
 .img2:hover *{
@@ -183,13 +217,18 @@
     position: absolute;
     right: 7%;
     top: 19%;
-    span{
-        left: 120%;
-    }
-    @media @mobile{
-        right: 2%;
+   @media @mobile , @tablet {
+        right: 0%;
         top: 22%;
     }
+    span{
+        left: 120%;
+        @media @mobile , @tablet {
+            left: -375%;
+            top: 150%;
+        }
+    }
+    
 }
 .img3:hover *{
     visibility: visible;
@@ -200,12 +239,17 @@
     position: absolute;
     right: 7%;
     top: 75%;
-    @media @mobile{
+    @media @mobile , @tablet{
         right: 10%;
         top: 80%;
     }
     span{
         left: 150%;
+        @media @mobile , @tablet {
+            left: -300%;
+            bottom: 250%;
+            
+        }
     }
 
 }
@@ -219,8 +263,14 @@
     top: 75%;
     span{
         right: 150%;
+        @media @mobile , @tablet {
+            left: 150%;
+            bottom: 250%;
+
+            
+        }
     }
-    @media @mobile{
+    @media @mobile , @tablet{
         left: 10%;
         top: 80%;
     }
