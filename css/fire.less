@@ -2,6 +2,44 @@
 @tablet: ~"only screen and (min-width: 530px) and (max-width: 949px)";
 @mThin: ~"only screen and (max-width: 529px) and (min-height: 801px)";
 
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+}
+
 .fireMain {
   height: 250vh;
   width: 100vw;
@@ -51,7 +89,6 @@
     @media @mThin {
       top: 38vh;
       width: 230vw;
-
     }
   }
 }
@@ -73,300 +110,161 @@
   width: 100vw;
   height: 100vh;
 }
-.pulse {
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 7s;
-  animation-duration: 7s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-  50% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-}
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-  50% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(0.8, 0.8, 0.8);
-    transform: scale3d(0.8, 0.8, 0.8);
-  }
-}
+
 .flex > * {
   position: absolute;
   display: flex;
 }
 .fire1 {
-  left: 20vw;
-  top: 10vh;
-  @media @tablet {
-    left: 20vw;
-    top: 20vh;
+  left: 19vw;
+  top: 27vh;
+  @media @tablet, @mobile , @mThin {
+    top: 35vh;
   }
-  @media @mobile {
-    left: 20vw;
-    top: 20vh;
-  }
-  @media @mThin {
-    left: 20vw;
-    top: 20vh;
-  }
+  
 }
 .fire2 {
-  left: 68vw;
+  left: 56vw;
   top: 25vh;
-  @media @mobile {
-    left: 71vw;
-    top: 34vh;
+  @media @mobile, @tablet, @mThin{
+    top: 35vh;
   }
-  @media @tablet {
-    left: 71vw;
-    top: 34vh;
-  }
-  @media @mThin {
-    left: 71vw;
-  top: 34vh;
-  }
+
 }
 .fire3 {
-  left: 8vw;
-  top: 50vh;
+
+  left: 22vw;
+  top: 52vh;
 }
 .fire4 {
-  left: 40vw;
-  top: 60vh;
+
+  left: 42vw;
+  top: 49vh;
 }
 .flame1 {
+  animation: pulse 13s 1s infinite  both;
+
   width: 15vw;
-  top: 8vh;
-  left: -3vw;
-  z-index: 1;
-  left: 20vw;
-  @media @mobile {
-    left: -14vw;
-    top: 17vw;
+  top: 1vh;
+  z-index: 0;
+  left: 16vw;
+  @media @mobile, @tablet, @mThin{
     width: 19vw;
   }
-  @media @tablet {
-    left: -14vw;
-    top: 17vw;
-    width: 19vw;
-  }
-  @media @mThin {
-    left: -14vw;
-    top: 17vw;
-    width: 19vw;
-  }
+ 
 }
 .flame2 {
-  width: 18vw;
-  left: 1vw;
+  animation: pulse 8s 3s infinite reverse both;
 
-  @media @mThin {
-    top: 13vw;
-    left: -7vw;
+  width: 18vw;
+  left: -1vw;
+  top: -4vw;
+
+  @media @mThin, @mobile, @tablet  {
+  
     width: 22vw;
   }
-  @media @mobile {
-    top: 13vw;
-    left: -7vw;
-    width: 22vw;
-  }
-  @media @tablet {
-    top: 13vw;
-    left: -7vw;
-    width: 22vw;
-  }
+  
 }
 .flame3 {
+  animation: pulse 10s 3s infinite reverse both;
+
   width: 15vw;
-  left: 7vw;
-  top: 10vh;
-  @media @mThin {
-    left: 1vw;
-    top: 10vh;
-    width: 21vw;
-  }
-  @media @mobile {
-    left: 1vw;
-    top: 10vh;
-    width: 21vw;
-  }
-  @media @tablet {
-    left: 1vw;
-    top: 10vh;
+  left: 8vw;
+  top: 5vh;
+  @media @mobile, @tablet, @mThin  {
     width: 21vw;
   }
 }
 .flame4 {
+ animation: pulse 7s 1s infinite  both;
+
   width: 14vw;
-  @media @mThin {
+  @media @mobile, @tablet, @mThin  {
     width: 19vw;
   }
-  @media @mobile {
-    width: 19vw;
-  }
-  @media @tablet {
-    width: 19vw;
-  }
+  
 }
 .flame5 {
+ animation: pulse 7s 1s infinite reverse both;
+  
   width: 13vw;
-  top: 3vh;
-  left: 3vw;
+  top: -3vh;
+  left: 7vw;
   z-index: 1;
-  @media @mThin {
+  @media @mobile, @tablet, @mThin {
     width: 20vw;
-    top: 2vh;
-    left: 5vw;
-  }
-  @media @mobile {
-    width: 20vw;
-    top: 2vh;
-    left: 5vw;
-  }
-  @media @tablet {
-    width: 20vw;
-    top: 2vh;
-    left: 5vw;
   }
 }
 .flame6 {
+   animation: pulse 12s 2s infinite  both;
   width: 14vw;
-  left: -5vw;
+  left: -6vw;
   top: 4vh;
-  z-index: 2;
-  @media @mThin {
+  z-index: 0;
+  @media @mobile, @tablet, @mThin  {
     width: 19vw;
-    left: -6vw;
-    top: 2vh;
-  }
-  @media @mobile {
-    width: 19vw;
-    left: -6vw;
-    top: 2vh;
-  }
-  @media @tablet {
-    width: 19vw;
-    left: -6vw;
-    top: 2vh;
+   
   }
 }
 .flame7 {
+ animation: pulse 7s 1s infinite reverse both;
+
   width: 17vw;
-  left: -3vw;
-  @media @mThin {
+  left: -6vw;
+  top: 5vw;
+  @media @mobile, @tablet, @mThin  {
     width: 20vw;
-    left: -5vw;
-  }
-  @media @mobile {
-    width: 20vw;
-    left: -5vw;
-  }
-  @media @tablet {
-    width: 20vw;
-    left: -5vw;
   }
 }
 .flame8 {
+ animation: pulse 11s 1s infinite  both;
+
   width: 16vw;
-  left: 6vw;
-  @media @mThin {
-    width: 21vw;
-  }
-  @media @mobile {
-    width: 21vw;
-  }
-  @media @tablet {
+  left: 11vw;
+  top: -3vw;
+  @media@mobile, @tablet, @mThin  {
     width: 21vw;
   }
 }
 .flame9 {
+ animation: pulse 9s 1s infinite reverse  both;
+
   width: 16vw;
   top: 7vh;
-  left: 1vw;
-  @media @mThin {
+  left: 4vw;
+  @media @mobile, @tablet, @mThin {
     width: 19vw;
-    top: 2vh;
-  }
-  @media @mobile {
-    width: 19vw;
-    top: 2vh;
-  }
-  @media @tablet {
-    width: 19vw;
-    top: 2vh;
   }
 }
 .flame10 {
+ animation: pulse 13s  infinite  both;
+
   width: 14vw;
   top: 3vh;
-  left: 9vw;
-  @media @mThin {
+  left: 14vw;
+  @media @mobile, @tablet, @mThin {
     width: 20vw;
-    top: 1vh;
-  }
-  @media @mobile {
-    width: 20vw;
-    top: 1vh;
-  }
-  @media @tablet {
-    width: 20vw;
-    top: 1vh;
   }
 }
 .flame11 {
+ animation: pulse 6s  infinite reverse both;
+
   width: 14vw;
-  left: 3vw;
-  @media @mThin {
+  left: 6vw;
+  top: -2vw;
+  @media @mobile, @tablet, @mThin  {
     width: 19vw;
-    left: 1vw;
-  }
-  @media @mobile {
-    width: 19vw;
-    left: 1vw;
-  }
-  @media @tablet {
-    width: 19vw;
-    left: 1vw;
   }
 }
 .flame12 {
+ animation: pulse 7s 2s infinite  both;
+
   width: 14vw;
   top: 5vh;
-  left: -3vw;
-  @media @mThin {
+  left: 0vw;
+  @media @mobile, @tablet, @mThin  {
     width: 18vw;
-    top: 3vh;
-    left: -4vw;
-  }
-  @media @mobile {
-    width: 18vw;
-    top: 3vh;
-    left: -4vw;
-  }
-  @media @tablet {
-    width: 18vw;
-    top: 3vh;
-    left: -4vw;
   }
 }
 //###################
@@ -387,13 +285,12 @@
   flex-direction: column;
   align-items: center;
   @media @mobile {
-    left: 12vw;
+    left: 15vw;
     bottom: 60vh;
   }
   @media @tablet {
     bottom: 75vh;
     left: 23vw;
-
   }
   @media @mThin {
     left: 18vw;
@@ -403,21 +300,15 @@
   }
 }
 .buttonX {
-  border: white solid 3px;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  padding-top: 5px;
   position: absolute;
   right: -20vw;
-  top: -30px;
+  top: -75px;
   z-index: 3;
+  cursor: pointer; 
+  :hover {
+    transition: 0.2s;
+    text-shadow: 0 0 10px #cd3c32;
+  }
   @media @mThin {
     font-size: 23px;
     height: 40px;
@@ -435,6 +326,10 @@
     height: 40px;
     width: 40px;
     right: -15vw;
+  }
+  span {
+    color: #cd3c32;
+    font-size: 50px;
   }
 }
 
@@ -456,10 +351,21 @@
   top: 10px;
   line-height: 36px;
   font-weight: bold;
-  color: white;
+  color: bisque;
   text-align: center;
   @media @mThin {
     width: 30vh;
+    height: 30vh;
+  }
+  h1 {
+    top: -10vh;
+    position: relative;
+  }
+  p {
+    position: relative;
+    align-items: flex-end;
+    /* bottom: -19px; */
+    display: flex;
     height: 30vh;
   }
 }
@@ -582,16 +488,10 @@
   width: 40vw;
   height: 20px;
   justify-content: space-between;
+  cursor: pointer; 
   
-  section {
-    width: 100px;
+  :hover {
+    transition: 0.2s;
+    text-shadow: 0 0 10px #cd3c32;
   }
-  @media @mThin {
-    top: 35vh;
-  }
-}
-
-.arrow {
-  stroke: rgb(205, 60, 50);
-  stroke-width: 1px;
 }

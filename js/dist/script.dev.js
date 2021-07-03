@@ -5,7 +5,7 @@ window.addEventListener("scroll", function () {
   var rec = header.getBoundingClientRect();
   var position = rec.top / window.innerHeight * 100 + 50;
   document.querySelectorAll(".slice").forEach(function (div) {
-    div.style.height = "".concat(position, "%");
+    div.style.height = "".concat(position, "vh");
     console.log(position);
 
     if (position <= 1) {

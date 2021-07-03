@@ -278,6 +278,19 @@
   width: 30vw;
   top: -450px;
 }
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos1 .tooltiptext {
+    left: -45vw;
+    width: 90vw;
+    height: unset;
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos1 .tooltiptext {
+    top: -650px;
+  }
+}
 .tooltipPos2 {
   margin-top: 86vh;
 }
@@ -285,12 +298,39 @@
   width: 30vw;
   top: -350px;
 }
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos2 .tooltiptext {
+    left: -62vw;
+    width: 90vw;
+    height: unset;
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos2 .tooltiptext {
+    top: -550px;
+  }
+}
 .tooltipPos3 {
   margin-top: 87vh;
 }
 .tooltipPos3 .tooltiptext {
   width: 30vw;
   top: -450px;
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos3 .tooltiptext {
+    left: -13vw;
+    width: 90vw;
+    height: unset;
+    top: -450px;
+    font-size: 3vw;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos3 .tooltiptext {
+    top: -650px;
+  }
 }
 .tooltipPos4 {
   margin-top: 83vh;
@@ -303,6 +343,20 @@
 .tooltipPos4 .tooltiptext ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 529px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos4 .tooltiptext {
+    left: -28vw;
+    width: 90vw;
+    height: unset;
+    font-size: 3vw;
+    top: -350px;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .tooltipPos4 .tooltiptext {
+    top: -550px;
+  }
 }
 #earth {
   padding-top: 135vh;

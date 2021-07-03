@@ -3,7 +3,7 @@ window.addEventListener("scroll",() => {
     const rec = header.getBoundingClientRect();
     const position = (rec.top / window.innerHeight) * 100+50;
     document.querySelectorAll(".slice").forEach((div) => {
-        div.style.height = `${position}%`;
+        div.style.height = `${position}vh`;
         console.log(position)
       if (position <= 1) {
         // div.style.height = "0px";
