@@ -99,7 +99,7 @@ window.addEventListener("scroll", function () {
   } // console.log(air);
 
 
-  var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6, #word7, #word8, #word9");
+  var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6, #word7, #word8, #word9, #word10");
   var halfVh = window.innerHeight * 0.5;
   words.forEach(function (wordEl) {
     var selectWord = document.querySelector("#".concat(wordEl.id));
