@@ -11,10 +11,11 @@
 form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   position: absolute;
   bottom: 20vh;
+  color: #517582;
 }
 @media only screen and (max-width: 529px) {
   form {
@@ -24,7 +25,6 @@ form {
 form * {
   padding: 10px;
   font-size: 20px;
-  border-radius: 10px;
   border: none;
   outline: none;
 }
@@ -46,16 +46,19 @@ form input {
 form textarea {
   background: #fffdfd78;
 }
+form label {
+  margin-top: 2vh;
+}
 .formCont {
   display: flex;
   justify-content: center;
 }
 .custom-btn {
   width: 22vw;
-  height: 40px;
+  height: 50px;
   padding: 10px 25px;
-  border: 2px solid goldenrod;
-  font-family: 'Lato', sans-serif;
+  border: 2px solid #517582;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   background: transparent;
   cursor: pointer;
@@ -73,15 +76,16 @@ form textarea {
   overflow: hidden;
   transition: all 0.3s ease;
   margin: 10px;
-  color: goldenrod;
+  color: #517582;
+  margin-top: 4vh;
 }
 .btn:hover {
-  background: rgba(218, 165, 32, 0.562);
+  background: rgba(81, 117, 130, 0.562);
   color: rgba(255, 255, 255, 0.726);
 }
 .btn:before {
   position: absolute;
-  content: '';
+  content: "";
   display: inline-block;
   top: -180px;
   left: 0;

@@ -28,6 +28,7 @@
   border: 2px solid whitesmoke;
   transition: 0.4s;
   right: 2vh;
+  background-color: whitesmoke;
 }
 .burger .burgerNav {
   height: 60vh;
