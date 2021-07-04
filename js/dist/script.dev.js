@@ -5,8 +5,7 @@ window.addEventListener("scroll", function () {
   var rec = header.getBoundingClientRect();
   var position = rec.top / window.innerHeight * 100 + 50;
   document.querySelectorAll(".slice").forEach(function (div) {
-    div.style.height = "".concat(position, "vh");
-    console.log(position);
+    div.style.height = "".concat(position, "vh"); // console.log(position)
 
     if (position <= 1) {
       // div.style.height = "0px";
@@ -50,8 +49,7 @@ window.addEventListener("scroll", function () {
   });
   var cloud = document.querySelector(".clouds");
   cloud.style.top = scrollPoss * 0.5 + "px";
-  var earth = scrolled.top;
-  console.log(earth);
+  var earth = scrolled.top; // console.log(earth);
 
   if (earth < -300) {
     document.querySelectorAll("#flower1, #flower2, #flower3, #flower4").forEach(function (img) {
@@ -101,28 +99,33 @@ window.addEventListener("scroll", function () {
   } // console.log(air);
 
 
-  var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6");
+  var words = document.querySelectorAll("#word1, #word2, #word3, #word4, #word5, #word6, #word7, #word8, #word9");
   var halfVh = window.innerHeight * 0.5;
   words.forEach(function (wordEl) {
     var selectWord = document.querySelector("#".concat(wordEl.id));
     var poss = selectWord.getBoundingClientRect();
     var wordTop = poss.top - 50;
     var wordBttm = poss.bottom;
-    var realBttm = wordBttm - halfVh;
+    var realBttm = wordBttm - halfVh; // wordEl.style.visibility = "hidden";
 
-    if (realBttm < 130) {
+    console.log(realBttm);
+
+    if (realBttm < 200) {
       wordEl.classList.add("fade-in");
-    } else if (realBttm > 130) {
+      wordEl.style.visibility = "visible";
+    } else if (realBttm > 200) {
       wordEl.classList.remove("fade-in");
+      wordEl.style.visibility = "hidden";
     }
 
     if (wordTop < 0) {
       wordEl.classList.remove("fade-in");
       wordEl.classList.add("fade-out");
+      wordEl.style.visibility = "visible";
     }
 
     if (wordTop > 0) {
-      wordEl.classList.remove("fade-out");
+      wordEl.classList.remove("fade-out"); // wordEl.style.visibility = "hidden";
     }
   });
 }, false); // ############### menu burger ###############

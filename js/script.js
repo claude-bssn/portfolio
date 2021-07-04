@@ -4,7 +4,7 @@ window.addEventListener("scroll",() => {
     const position = (rec.top / window.innerHeight) * 100+50;
     document.querySelectorAll(".slice").forEach((div) => {
         div.style.height = `${position}vh`;
-        console.log(position)
+        // console.log(position)
       if (position <= 1) {
         // div.style.height = "0px";
         document.querySelector(".nameTitle").style.display = "none";
@@ -52,7 +52,7 @@ window.addEventListener("scroll",() => {
     cloud.style.top = scrollPoss * 0.5 + "px";
 
     let earth = scrolled.top;
-  console.log(earth);
+  // console.log(earth);
     if (earth < -300) {
       document
         .querySelectorAll("#flower1, #flower2, #flower3, #flower4")
@@ -112,7 +112,7 @@ window.addEventListener("scroll",() => {
     }
     // console.log(air);
     let words = document.querySelectorAll(
-      "#word1, #word2, #word3, #word4, #word5, #word6"
+      "#word1, #word2, #word3, #word4, #word5, #word6, #word7, #word8, #word9"
     );
     let halfVh = window.innerHeight * 0.5;
 
@@ -122,18 +122,27 @@ window.addEventListener("scroll",() => {
       let wordTop = poss.top - 50;
       let wordBttm = poss.bottom;
       let realBttm = wordBttm - halfVh;
+      // wordEl.style.visibility = "hidden";
+    console.log(realBttm);
 
-      if (realBttm < 130) {
+      if (realBttm < 200) {
         wordEl.classList.add("fade-in");
-      } else if (realBttm > 130) {
+        wordEl.style.visibility = "visible";
+      } else if (realBttm > 200) {
         wordEl.classList.remove("fade-in");
+        wordEl.style.visibility = "hidden";
+
       }
       if (wordTop < 0) {
         wordEl.classList.remove("fade-in");
         wordEl.classList.add("fade-out");
+        wordEl.style.visibility = "visible";
+
       }
       if (wordTop > 0) {
         wordEl.classList.remove("fade-out");
+        // wordEl.style.visibility = "hidden";
+
       }
     });
   },

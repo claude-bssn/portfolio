@@ -1,10 +1,25 @@
 .air {
   width: 100vw;
-  height: 1000vh;
+  height: 700vh;
   z-index: -7;
   position: relative;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 529px) {
+  .air {
+    height: 1000vh;
+  }
+}
+@media only screen and (max-width: 529px) and (min-height: 801px) {
+  .air {
+    height: 750vh;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .air {
+    height: 650vh;
+  }
 }
 .air .parallaxWord {
   display: flex;
@@ -14,26 +29,42 @@
   z-index: 0;
 }
 .air .parallaxWord span {
-  font-size: 10vw;
-  margin: 50vh 0px 60vh 0px;
+  font-size: 5vw;
+  margin: 10vh 0px 35vh 0px;
   align-self: center;
+  visibility: hidden;
+  color: #87649e;
+  font-weight: bold;
 }
 @media only screen and (max-width: 529px) {
   .air .parallaxWord span {
-    margin: 20vh 0px 30vh 0px;
+    margin: 15vh 0px 30vh 0px;
+    font-size: 9vw;
+  }
+}
+@media only screen and (max-width: 529px) and (min-height: 801px) {
+  .air .parallaxWord span {
+    margin: 10vh 0px 35vh 0px;
+    font-size: 9vw;
   }
 }
 @media only screen and (min-width: 530px) and (max-width: 949px) {
   .air .parallaxWord span {
-    margin: 30vh 0px 40vh 0px;
+    font-size: 9vw;
   }
 }
 .words {
-  height: 50vh;
+  height: 70vh;
   width: 50vw;
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+@media only screen and (max-width: 529px), only screen and (max-width: 529px) and (min-height: 801px), only screen and (min-width: 530px) and (max-width: 949px) {
+  .words {
+    width: 80vw;
+    height: 80vh;
+  }
 }
 .parallaxAir {
   height: 100vh;
