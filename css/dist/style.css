@@ -40,7 +40,7 @@ main {
 }
 .slice1 p {
   position: relative;
-  bottom: 1 vh;
+  bottom: 2vh;
 }
 .slice2 {
   font-size: 40px;
